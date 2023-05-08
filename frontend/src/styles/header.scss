@@ -1,9 +1,4 @@
-$dark: #131921;
-$white: #fff;
-$smoke: #ccc;
-$orange: #f08804;
-$orangeL: #febd69;
-$darkGray: #232f3e;
+@import './colors';
 
 .top-header {
   color: $white;
@@ -138,7 +133,7 @@ $darkGray: #232f3e;
     }
 
     &.sec-2 {
-      background-color: $darkGray;
+      background-color: $neoGray;
 
       .content {
         padding-top: 0;

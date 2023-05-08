@@ -1,0 +1,171 @@
+@import "./colors";
+
+footer {
+  background-color: $neoGray;
+  color: $white;
+
+  .sec-1 {
+    background-color: $neoGrayLight;
+
+    button {
+      width: 100%;
+      padding: 1rem 0;
+      border: none;
+      background-color: transparent;
+      color: $white;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $neoGrayLightHover;
+      }
+    }
+  }
+
+  .sec-2 {
+    background-color: $neoGray;
+    padding: 1rem 0;
+
+    .top-sec {
+      display: flex;
+      justify-content: center;
+      gap: 5rem;
+      padding: 3rem 0;
+
+      div {
+        ul {
+          list-style: none;
+          font-size: 14px;
+
+          li {
+            padding: 0.3rem 0;
+
+            h3 {
+              color: $white;
+              font-size: 16px;
+            }
+
+            a {
+              text-decoration: none;
+              color: $smokeLight;
+
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+
+        &.col-2 {
+          ul {
+            li {
+              &:last-child {
+                a {
+                  display: flex;
+                  align-items: center;
+                  gap: 0.3rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .bottom-sec {
+      display: flex;
+      justify-content: center;
+      border-top: 1px solid $neoGrayLight;
+      padding: 1.5rem 0;
+
+      .col-1 {
+        margin-right: 4rem;
+
+        span {
+          display: flex;
+          a {
+            text-decoration: none;
+          }
+        }
+      }
+
+      .col-2 {
+        display: inherit;
+        gap: 0.5rem;
+        color: $smoke;
+
+        > span {
+          display: inherit;
+          border: 1px solid $smokeDark;
+          align-items: center;
+          font-size: 13px;
+          gap: 0.5rem;
+          padding-inline: 0.5rem;
+
+          &:hover {
+            border: 1px solid $white;
+          }
+
+          &.span-2 {
+            :first-child {
+              color: $white;
+              font-size: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .sec-3 {
+    background-color: $neoGrayDark;
+    padding: 2rem 0;
+
+    .top-sec {
+      margin-bottom: 3rem;
+      .category-list {
+        margin: auto;
+        max-width: 80%;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 1rem;
+
+        a {
+          text-decoration: none;
+          font-size: 12px;
+          color: $smokeNeo;
+
+          &:hover {
+            text-decoration: underline;
+          }
+
+          h4 {
+            color: $smokeLight;
+          }
+        }
+      }
+    }
+
+    .bottom-sec {
+      color: $smokeLight;
+      font-size: 12px;
+      div {
+        text-align: center;
+        span {
+          a {
+            color: $smokeLight;
+            padding-inline: 0.5rem;
+            text-decoration: none;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+
+        &:first-child {
+          margin-bottom: 0.3rem;
+        }
+      }
+    }
+  }
+}

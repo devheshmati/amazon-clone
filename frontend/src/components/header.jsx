@@ -1,4 +1,4 @@
-import allSymbol from "../assets/images/allSymbol.png";
+import symbolset1 from "../assets/images/symbolset1.png";
 import MiniIcon from "../components/miniIcon";
 import { Icon } from "@iconify/react";
 import "../styles/header.scss";
@@ -12,7 +12,7 @@ export default function Header() {
             <div className="col-1">
               <span>
                 <MiniIcon
-                  img={allSymbol}
+                  img={symbolset1}
                   w={"100px"}
                   h={"40px"}
                   x={"-8px"}
@@ -22,7 +22,7 @@ export default function Header() {
               <span className="span-2">
                 <span className="location-logo">
                   <MiniIcon
-                    img={allSymbol}
+                    img={symbolset1}
                     w={"100%"}
                     h={"100%"}
                     x={"-69px"}
@@ -43,7 +43,7 @@ export default function Header() {
                 <input type="text" placeholder="Search Amazon" />
                 <button type="submit">
                   <MiniIcon
-                    img={allSymbol}
+                    img={symbolset1}
                     w={"40px"}
                     h={"40px"}
                     x={"0px"}
@@ -81,7 +81,7 @@ export default function Header() {
                       0
                     </span>
                     <MiniIcon
-                      img={allSymbol}
+                      img={symbolset1}
                       w={"100%"}
                       h={"100%"}
                       x={"-9px"}
@@ -100,7 +100,7 @@ export default function Header() {
               <span>
                 <span>
                   <MiniIcon
-                    img={allSymbol}
+                    img={symbolset1}
                     w={"21px"}
                     h={"21px"}
                     x={"-171px"}
