@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/homePage";
 import NoPage from "./pages/noPage";
 import "./styles/reset.scss";
-import "./styles/general.scss";
+import "./styles/basic.scss";
 import Main from "./components/main";
 
 export default function App() {

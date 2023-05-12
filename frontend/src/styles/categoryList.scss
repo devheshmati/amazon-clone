@@ -1,0 +1,14 @@
+.category-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  padding: 1rem 1rem 4rem;
+  
+  div {
+    &:first-child,
+    &:last-child {
+      grid-column-start: 1; 
+      grid-column-end: 5;
+    }
+  }
+}

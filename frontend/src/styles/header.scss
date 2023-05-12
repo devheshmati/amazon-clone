@@ -1,4 +1,4 @@
-@import './colors';
+@import "./colors";
 
 .top-header {
   color: $white;
@@ -183,18 +183,6 @@
           }
         }
       }
-    }
-
-    .small {
-      font-size: 14px;
-    }
-
-    .smoke {
-      color: $smoke;
-    }
-
-    .bold {
-      font-weight: bold;
     }
   }
 }

@@ -2,6 +2,7 @@ import symbolset1 from "../assets/images/symbolset1.png";
 import MiniIcon from "../components/miniIcon";
 import { Icon } from "@iconify/react";
 import "../styles/header.scss";
+import "../styles/general.scss";
 
 export default function Header() {
   return (
