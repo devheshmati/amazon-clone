@@ -1,10 +1,228 @@
+import SectionLink from "./sectionLink";
 import MiniIcon from "./miniIcon";
+import MiniSectionLink from './miniSectionLink';
 import { Icon } from "@iconify/react";
 import "../styles/footer.scss";
 import symbolset1 from "../assets/images/symbolset1.png";
 import symbolset2 from "../assets/images/symbolset2.png";
 
 export default function Footer() {
+  const sectionLinkData = [
+    {
+      id: 1,
+      title: "Get to Know Us",
+      links: [
+        {
+          id: 1,
+          title: "Careers",
+          url: "#",
+          arrowSign: false,
+        },
+        {
+          id: 2,
+          title: "Blog",
+          url: "#",
+          arrowSign: false,
+        },
+        {
+          id: 3,
+          title: "About Amazon",
+          url: "#",
+          arrowSign: false,
+        },
+        {
+          id: 4,
+          title: "Investor Relations",
+          url: "#",
+          arrowSign: false,
+        },
+        {
+          id: 5,
+          title: "Amazon Devices",
+          url: "#",
+          arrowSign: false,
+        },
+        {
+          id: 6,
+          title: "Amazon Sience",
+          url: "#",
+          arrowSign: false,
+        },
+      ],
+    },
+    {
+      id: 2,
+      title: "Make Money with Us",
+      links: [
+        {
+          id: 1,
+          title: "Sell products on Amazon",
+          url: "#",
+          arrowSign: false,
+        },
+        {
+          id: 2,
+          title: "Sell on Amazon Business",
+          url: "#",
+          arrowSign: false,
+        },
+        {
+          id: 3,
+          title: "Sell apps on Amazon",
+          url: "#",
+          arrowSign: false,
+        },
+        {
+          id: 4,
+          title: "Become an Affiliate",
+          url: "#",
+          arrowSign: false,
+        },
+        {
+          id: 5,
+          title: "Advertise Your Products",
+          url: "#",
+          arrowSign: false,
+        },
+        {
+          id: 6,
+          title: "Self-Publish with Us",
+          url: "#",
+          arrowSign: false,
+        },
+        {
+          id: 7,
+          title: "Host an Amazon Hub",
+          url: "#",
+          arrowSign: false,
+        },
+        {
+          id: 8,
+          title: "See More Make Money with Us",
+          url: "#",
+          arrowSign: true,
+        },
+      ],
+    },
+    {
+      id: 3,
+      title: "Amazon Payment Product",
+      links: [
+        {
+          id: 1,
+          title: "Amazon Business Card",
+          url: "#",
+          arrowSign: false,
+        },
+        {
+          id: 2,
+          title: "Shop with Points",
+          url: "#",
+          arrowSign: false,
+        },
+        {
+          id: 3,
+          title: "Reload Your Balance",
+          url: "#",
+          arrowSign: false,
+        },
+        {
+          id: 4,
+          title: "Amazon Currency Converter",
+          url: "#",
+          arrowSign: false,
+        },
+      ],
+    },
+    {
+      id: 4,
+      title: "Let Us Help You",
+      links: [
+        {
+          id: 1,
+          title: "Amazon and COVID-19",
+          url: "#",
+          arrowSign: false,
+        },
+        {
+          id: 2,
+          title: "Your Account",
+          url: "#",
+          arrowSign: false,
+        },
+        {
+          id: 3,
+          title: "Your Orders",
+          url: "#",
+          arrowSign: false,
+        },
+        {
+          id: 4,
+          title: "Shipping Rates & Policies",
+          url: "#",
+          arrowSign: false,
+        },
+        {
+          id: 5,
+          title: "Returns & Replacements",
+          url: "#",
+          arrowSign: false,
+        },
+        {
+          id: 6,
+          title: "Manage Your Content and Devices",
+          url: "#",
+          arrowSign: false,
+        },
+        {
+          id: 7,
+          title: "Amazon Assistant",
+          url: "#",
+          arrowSign: false,
+        },
+        {
+          id: 8,
+          title: "Help",
+          url: "#",
+          arrowSign: false,
+        },
+      ],
+    },
+  ];
+  const miniSectionLinkData = [
+    {id: 1, title: 'Amazon Music', context: 'Stream millions'},
+    {id: 2, title: 'Amazon Advertising', context: 'Find, attract, and engage customers'},
+    {id: 3, title: 'Gpm', context: 'Score deals on fashion brands'},
+    {id: 4, title: 'AbeBooks', context: 'Books, art & collections'},
+    {id: 5, title: 'ACX', context: 'Audiobook Publishing Made Easy'},
+    {id: 6, title: 'Sell on Amazon', context: 'Start a Selling Account'},
+    {id: 7, title: 'Amazon Business', context: 'Everything For Your Business'},
+    {id: 8, title: 'AmazonGlobal', context: 'Ship Orders Internationally'},
+    {id: 9, title: 'Home Services', context: 'Experienced Pros Happiness Guarantee'},
+    {id: 10, title: 'Amazon Ignite', context: 'Sell your orginal Digital Educational Resources'},
+    {id: 11, title: 'Amazon Web Services', context: 'Scalable Cloud Computing Services'},
+    {id: 12, title: 'Audible', context: 'Listen to Books & Orginal Audio Performances'},
+    {id: 13, title: 'Book Depository', context: 'Books With Free Delivery Worldwide'},
+    {id: 14, title: 'Box Office Mojo', context: 'Find Movie Box Office Data'},
+    {id: 15, title: 'ComiXology', context: 'Thousands of Digital Comics'},
+    {id: 16, title: 'DPReview', context: 'Digital Photography'},
+    {id: 17, title: 'Fabric', context: 'Sewing, Quilting & Knitting'},
+    {id: 18, title: 'Goodreads', context: 'Book reviews & recommendations'},
+    {id: 19, title: 'IMDb', context: 'Movies, TV & Celebrities'},
+    {id: 20, title: 'IMDbPro', context: 'Get Info Entertainment'},
+    {id: 21, title: 'Kindle Direct Publishing', context: 'Indie Digital & Print Publishing Made Easy'},
+    {id: 22, title: 'Prime Video Direct', context: 'Video Distributation Made Easy'},
+    {id: 23, title: 'Shopbop', context: 'Designer Fashion Brands'},
+    {id: 24, title: 'Woot!', context: 'Deals and Shenanigans'},
+    {id: 25, title: 'Zappos', context: 'Shoes & Clothing'},
+    {id: 26, title: 'Ring', context: 'Smart Home Security Systems'},
+    {id: 27, title: 'eero WiFi', context: 'Stream 4K Video in Every Room'},
+    {id: 28, title: 'Blink', context: 'Smart Security for Every Home'},
+    {id: 29, title: 'Neighbors App', context: 'Real-Time Crime & Safety Alerts'},
+    {id: 30, title: 'Amazon Subscription Boxes', context: 'Top subscription boxes - right to your door'},
+    {id: 31, title: 'PillPack', context: 'Pharmacy Simplified'},
+  ];
+
   return (
     <>
       <footer>
@@ -13,129 +231,9 @@ export default function Footer() {
         </section>
         <section className="sec-2">
           <section className="top-sec">
-            <div className="col-1">
-              <ul>
-                <li>
-                  <h3>Get to know us</h3>
-                </li>
-                <li>
-                  {/* i should use link component from react-router-dom */}
-                  <a href="#">Careers</a>
-                </li>
-                <li>
-                  {/* i should use link component from react-router-dom */}
-                  <a href="#">Blog</a>
-                </li>
-                <li>
-                  {/* i should use link component from react-router-dom */}
-                  <a href="#">About Amazon</a>
-                </li>
-                <li>
-                  {/* i should use link component from react-router-dom */}
-                  <a href="#">Investor Relations</a>
-                </li>
-                <li>
-                  {/* i should use link component from react-router-dom */}
-                  <a href="#">Amazon Devices</a>
-                </li>
-                <li>
-                  {/* i should use link component from react-router-dom */}
-                  <a href="#">Amazon Science</a>
-                </li>
-              </ul>
-            </div>
-            <div className="col-2">
-              <ul>
-                <li>
-                  <h3>Make Money with Us</h3>
-                </li>
-                <li>
-                  <a href="#">Sell products on Amazon</a>
-                </li>
-                <li>
-                  <a href="#">Sell on Amazon Business</a>
-                </li>
-                <li>
-                  <a href="#">Sell apps on Amazon</a>
-                </li>
-                <li>
-                  <a href="#">Become an Affiliate</a>
-                </li>
-                <li>
-                  <a href="#">Advertise Your Products</a>
-                </li>
-                <li>
-                  <a href="#">Self-Publish with Us</a>
-                </li>
-                <li>
-                  <a href="#">Host an Amazon Hub</a>
-                </li>
-                <li>
-                  <a href="#">
-                    <span>
-                      <MiniIcon
-                        img={symbolset1}
-                        w={"10px"}
-                        h={"10px"}
-                        x={"-106px"}
-                        y={"-359px"}
-                      />
-                    </span>
-                    See More Make Money
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div className="col-3">
-              <ul>
-                <li>
-                  <h3>Amazon Payment Products</h3>
-                </li>
-                <li>
-                  <a href="#">Amazon Business Card</a>
-                </li>
-                <li>
-                  <a href="#">Shop with Points</a>
-                </li>
-                <li>
-                  <a href="#">Reload Your Balance</a>
-                </li>
-                <li>
-                  <a href="#">Amazon Currency Converter</a>
-                </li>
-              </ul>
-            </div>
-            <div className="col-4">
-              <ul>
-                <li>
-                  <h3>Let Us Help You</h3>
-                </li>
-                <li>
-                  <a href="#">Amazon and COVID-19</a>
-                </li>
-                <li>
-                  <a href="#">Your Account</a>
-                </li>
-                <li>
-                  <a href="#">Your Orders</a>
-                </li>
-                <li>
-                  <a href="#">Shipping Rates & Policies</a>
-                </li>
-                <li>
-                  <a href="#">Returns & Replacements</a>
-                </li>
-                <li>
-                  <a href="#">Manage Your Content and Devices</a>
-                </li>
-                <li>
-                  <a href="#">Amazon Assistant</a>
-                </li>
-                <li>
-                  <a href="#">Help</a>
-                </li>
-              </ul>
-            </div>
+            {sectionLinkData.map((item) => (
+              <SectionLink key={item.id} item={item} />
+            ))}
           </section>
           <section className="bottom-sec">
             <div className="col-1">
@@ -196,106 +294,7 @@ export default function Footer() {
         </section>
         <section className="sec-3">
           <section className="top-sec">
-            <div className="category-list">
-              <a href="#">
-                <h4>Title</h4>
-                <p>Information</p>
-              </a>
-              <a href="#">
-                <h4>Title</h4>
-                <p>Information</p>
-              </a>
-              <a href="#">
-                <h4>Title</h4>
-                <p>Information</p>
-              </a>
-              <a href="#">
-                <h4>Title</h4>
-                <p>Information</p>
-              </a>
-              <a href="#">
-                <h4>Title</h4>
-                <p>Information</p>
-              </a>
-              <a href="#">
-                <h4>Title</h4>
-                <p>Information</p>
-              </a>
-              <a href="#">
-                <h4>Title</h4>
-                <p>Information</p>
-              </a>
-              <a href="#">
-                <h4>Title</h4>
-                <p>Information</p>
-              </a>
-              <a href="#">
-                <h4>Title</h4>
-                <p>Information</p>
-              </a>
-              <a href="#">
-                <h4>Title</h4>
-                <p>Information</p>
-              </a>
-              <a href="#">
-                <h4>Title</h4>
-                <p>Information</p>
-              </a>
-              <a href="#">
-                <h4>Title</h4>
-                <p>Information</p>
-              </a>
-              <a href="#">
-                <h4>Title</h4>
-                <p>Information</p>
-              </a>
-              <a href="#">
-                <h4>Title</h4>
-                <p>Information</p>
-              </a>
-              <a href="#">
-                <h4>Title</h4>
-                <p>Information</p>
-              </a>
-              <a href="#">
-                <h4>Title</h4>
-                <p>Information</p>
-              </a>
-              <a href="#">
-                <h4>Title</h4>
-                <p>Information</p>
-              </a>
-              <a href="#">
-                <h4>Title</h4>
-                <p>Information</p>
-              </a>
-              <a href="#">
-                <h4>Title</h4>
-                <p>Information</p>
-              </a>
-              <a href="#">
-                <h4>Title</h4>
-                <p>
-                  This is for test for see what's happend if the text to be long
-                </p>
-              </a>
-              <a href="#">
-                <h4>Title</h4>
-                <p>Information</p>
-              </a>
-              <a href="#">
-                <h4>Title</h4>
-                <p>Information</p>
-              </a>
-              <a href="#">
-                <h4>Title</h4>
-                <p>Information</p>
-              </a>
-              <a href="#">
-                <h4>Title</h4>
-                <p>Information</p>
-              </a>
-            </div>
+            <MiniSectionLink data={miniSectionLinkData}/>
           </section>
           <section className="bottom-sec">
             <div>
