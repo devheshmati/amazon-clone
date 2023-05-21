@@ -2,171 +2,39 @@ import Header from "../components/header";
 import Footer from "../components/footer";
 import Main from "../components/main";
 import Container from "../components/container";
-import CategoryList from "../components/categoryList";
+import MainSlider from "../components/mainSlider";
 
 export default function HomePage() {
-  const categories = [
+  const sliderData = [
     {
-      id: 1,
-      type: "header",
-      title: "Find the perfect gift\n for Mom",
-      category: "for mom",
-      linkActive: false,
-      headerImg: "Fuji_LP_header_MD21_en_US-text-removed.png",
-      headerAlt: "alt text for header image",
+      url: "#1",
+      img: "slide1.jpg",
+      alt: "slidr1 image alt",
     },
     {
-      id: 2,
-      type: "card",
-      title: "test main title for this item",
-      category: "apparel",
-      linkActive: true,
-      cardImg: "51ce0zh0SoL.png",
-      cardAlt: "alt text for card image",
+      url: "#2",
+      img: "slide2.jpg",
+      alt: "slidr2 image alt",
     },
     {
-      id: 3,
-      type: "card",
-      title: "test main title for this item",
-      category: "shoes",
-      linkActive: true,
-      cardImg: "61cU0fj7exL.jpg",
-      cardAlt: "alt text for card image",
+      url: "#3",
+      img: "slide3.jpg",
+      alt: "slidr3 image alt",
     },
     {
-      id: 4,
-      type: "card",
-      title: "test main title for this item",
-      category: "jewelry",
-      linkActive: true,
-      cardImg: "41YGzuFNkYL.jpg",
-      cardAlt: "alt text for card image",
+      url: "#4",
+      img: "slide4.jpg",
+      alt: "slide4 image alt",
     },
     {
-      id: 5,
-      type: "card",
-      title: "test main title for this item",
-      category: "watches",
-      linkActive: true,
-      cardImg: "51MMdH0zPfL.jpg",
-      cardAlt: "alt text for card image",
+      url: "#5",
+      img: "slide5.jpg",
+      alt: "slide5 image alt",
     },
     {
-      id: 6,
-      type: "card",
-      title: "test main title for this item",
-      category: "skin care",
-      linkActive: true,
-      cardImg: "675540184.png",
-      cardAlt: "alt text for card image",
-    },
-    {
-      id: 7,
-      type: "card",
-      title: "test main title for this item",
-      category: "makeup",
-      linkActive: true,
-      cardImg: "548156077.png",
-      cardAlt: "alt text for card image",
-    },
-    {
-      id: 8,
-      type: "card",
-      title: "test main title for this item",
-      category: "handbags",
-      linkActive: true,
-      cardImg: "234479416.png",
-      cardAlt: "alt text for card image",
-    },
-    {
-      id: 9,
-      type: "card",
-      title: "test main title for this item",
-      category: "beauty tools",
-      linkActive: true,
-      cardImg: "763666195.png",
-      cardAlt: "alt text for card image",
-    },
-    {
-      id: 10,
-      type: "card",
-      title: "test main title for this item",
-      category: "mobile phones",
-      linkActive: true,
-      cardImg: "495082102.jpg",
-      cardAlt: "alt text for card image",
-    },
-    {
-      id: 11,
-      type: "card",
-      title: "test main title for this item",
-      category: "electronics",
-      linkActive: true,
-      cardImg: "1040441149.png",
-      cardAlt: "alt text for card image",
-    },
-    {
-      id: 12,
-      type: "card",
-      title: "test main title for this item",
-      category: "cases",
-      linkActive: true,
-      cardImg: "61Rrv-bvdhL.jpg",
-      cardAlt: "alt text for card image",
-    },
-    {
-      id: 13,
-      type: "card",
-      title: "test main title for this item",
-      category: "smart watches",
-      linkActive: true,
-      cardImg: "71NWRdNUfYL_smartwatch.jpg",
-      cardAlt: "alt text for card image",
-    },
-    {
-      id: 14,
-      type: "card",
-      title: "test main title for this item",
-      category: "kitchen",
-      linkActive: true,
-      cardImg: "Fuji_Passover_Mixer._CB422563791_.jpg",
-      cardAlt: "alt text for card image",
-    },
-    {
-      id: 15,
-      type: "card",
-      title: "test main title for this item",
-      category: "home",
-      linkActive: true,
-      cardImg: "489420001.png",
-      cardAlt: "alt text for card image",
-    },
-    {
-      id: 16,
-      type: "card",
-      title: "test main title for this item",
-      category: "decor",
-      linkActive: true,
-      cardImg: "41XVTbwV0L-2.png",
-      cardAlt: "alt text for card image",
-    },
-    {
-      id: 17,
-      type: "card",
-      title: "test main title for this item",
-      category: "wall art",
-      linkActive: true,
-      cardImg: "51LX-jfe7WL.jpg",
-      cardAlt: "alt text for card image",
-    },
-    {
-      id: 18,
-      type: "header",
-      title: "Shop Deals for Mom",
-      category: "for mom",
-      linkActive: true,
-      headerImg: "LP_ShopDeals_v2_en-remove-text.jpg",
-      headerAlt: "alt text for header image",
+      url: "#6",
+      img: "slide6.jpg",
+      alt: "slide6 image alt",
     },
   ];
 
@@ -175,9 +43,19 @@ export default function HomePage() {
       <Header />
       <Main>
         <Container>
-          <CategoryList categories={categories} />
+          <MainSlider data={sliderData} />
+          <div>
+            <h3>hello</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
+              minima laboriosam perferendis quam provident aperiam, voluptatum,
+              nobis optio illo velit asperiores mollitia neque magni sunt? Omnis
+              saepe nisi corporis fuga.
+            </p>
+          </div>
         </Container>
       </Main>
+
       <Footer />
     </>
   );

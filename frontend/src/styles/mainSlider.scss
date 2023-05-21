@@ -1,0 +1,51 @@
+@import "./colors";
+
+.mainSlider {
+  position: relative;
+  .slideFrame {
+    overflow: hidden;
+    .slides {
+      transition: 0.3s;
+      display: flex;
+      .slide {
+        a {
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  button {
+    position: absolute;
+    top: 0;
+    width: 80px;
+    height: 240px;
+    background-color: transparent;
+    border: 2px solid transparent;
+    outline: 2px solid transparent;
+    font-size: 3rem;
+    color: $white;
+    padding-inline: 2px;
+
+    &:focus {
+      border: 2px solid $white;
+      outline: 2px solid $dark;
+    }
+
+    &#leftBtn {
+      svg {
+        filter: drop-shadow(-3px 0 $dark);
+      }
+      left: 2px;
+    }
+
+    &#rightBtn {
+      svg {
+        filter: drop-shadow(3px 0 $dark);
+      }
+      right: 2px;
+    }
+  }
+}

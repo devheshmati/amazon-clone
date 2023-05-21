@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/homePage";
+import MotherDealPage from "./pages/dealMotherPage";
 import NoPage from "./pages/noPage";
 import "./styles/reset.scss";
 import "./styles/basic.scss";
@@ -12,6 +13,9 @@ export default function App() {
         <Routes>
           <Route path="/">
             <Route index element={<HomePage />} />
+            <Route path="deal/">
+              <Route path="mother" elements={<MotherDealPage />} />
+            </Route>
             <Route path="*" element={<NoPage />} />
           </Route>
         </Routes>
