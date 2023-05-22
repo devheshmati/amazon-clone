@@ -4,7 +4,7 @@ import Main from "../components/main";
 import Container from "../components/container";
 import CategoryList from "../components/categoryList";
 
-export default function HomePage() {
+export default function DealMotherpage() {
   const categories = [
     {
       id: 1,
@@ -163,7 +163,7 @@ export default function HomePage() {
       id: 18,
       type: "header",
       title: "Shop Deals for Mom",
-      category: "for mom",
+      category: "forMom",
       linkActive: true,
       headerImg: "LP_ShopDeals_v2_en-remove-text.jpg",
       headerAlt: "alt text for header image",

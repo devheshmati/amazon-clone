@@ -3,6 +3,8 @@ import Footer from "../components/footer";
 import Main from "../components/main";
 import Container from "../components/container";
 import MainSlider from "../components/mainSlider";
+import InfoLink from "../components/infoLink";
+import Gapper from "../components/gapper";
 
 export default function HomePage() {
   const sliderData = [
@@ -38,21 +40,21 @@ export default function HomePage() {
     },
   ];
 
+  const infoLinkData = {
+    country: "Canada",
+    title: "amazon.ca",
+    url: "https://amazon.ca",
+  };
+
   return (
     <>
       <Header />
       <Main>
         <Container>
           <MainSlider data={sliderData} />
-          <div>
-            <h3>hello</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
-              minima laboriosam perferendis quam provident aperiam, voluptatum,
-              nobis optio illo velit asperiores mollitia neque magni sunt? Omnis
-              saepe nisi corporis fuga.
-            </p>
-          </div>
+          <Gapper>
+            <InfoLink data={infoLinkData} />
+          </Gapper>
         </Container>
       </Main>
 

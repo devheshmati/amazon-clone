@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { Outlet, Link } from "react-router-dom";
 import "../styles/mainSlider.scss";
 import { Icon } from "@iconify/react";
 
@@ -15,8 +16,6 @@ export default function MainSlider({ data }) {
       : setIndexNum(data.length - 1);
   };
 
-  useEffect(() => {}, []);
-
   return (
     <div className="mainSlider">
       <div className="slideFrame">
@@ -29,12 +28,12 @@ export default function MainSlider({ data }) {
         >
           {data.map((item, index) => (
             <div key={index} className="slide">
-              <a href={item.url}>
+              <Link to={item.url}>
                 <img
                   src={`${import.meta.env.VITE_BASIC_SLIDER_PATH}${item.img}`}
                   alt={item.alt}
                 />
-              </a>
+              </Link>
             </div>
           ))}
         </div>

@@ -1,3 +1,34 @@
+@font-face {
+  font-family: "Amazon Ember Thin";
+  src: local("Amazon Ember"),
+    url("./src/fonts/AmazonEmber_Th.ttf") format("woff");
+}
+@font-face {
+  font-family: "Amazon Ember Light";
+  src: local("Amazon Ember"),
+    url("./src/fonts/AmazonEmber_Lt.ttf") format("woff");
+}
+@font-face {
+  font-family: "Amazon Ember";
+  src: local("Amazon Ember"),
+    url("./src/fonts/AmazonEmber_Rg.ttf") format("woff");
+}
+@font-face {
+  font-family: "Amazon Ember Medium";
+  src: local("Amazon Ember"),
+    url("./src/fonts/AmazonEmber_Medium.ttf") format("woff");
+}
+@font-face {
+  font-family: "Amazon Ember Header";
+  src: local("Amazon Ember"),
+    url("./src/fonts/AmazonEmber_He.ttf") format("woff");
+}
+@font-face {
+  font-family: "Amazon Ember Bold";
+  src: local("Amazon Ember"),
+    url("./src/fonts/AmazonEmber_Bd.ttf") format("woff");
+}
+
 html {
   font-family: Arial, sans serif;
 }

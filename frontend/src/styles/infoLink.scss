@@ -1,0 +1,11 @@
+@import './colors';
+
+.infoLink {
+  display: flex;
+  gap: 0.3rem;
+  justify-content: center;
+  padding: 0.5rem;
+  background-color: $white;
+  font-size: 14px;
+  font-family: "Amazon Ember Medium",Arial,sans-serif;
+}

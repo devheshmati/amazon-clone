@@ -1,30 +1,47 @@
-import '../styles/categoryItem.scss';
+import {Outlet, Link} from 'react-router-dom';
+import "../styles/categoryItem.scss";
 
 export default function CategoryItem({ item }) {
-  const basePath = './src/assets/images/';
-  const headerPath = basePath + 'headers/';
-  const cardPath = basePath + 'cards/'; 
-  const baseUrl = '/products/category/';
-
   return (
     <div className="category-item">
       {item.type === "card" ? (
         <div className="category-card">
-          <a href={baseUrl + item.url}>
-            <img src={cardPath + item.cardImg} alt={item.cardAlt} />
+          <Link to={import.meta.env.VITE_BASE_URL + item.category}>
+            <img
+              src={
+                import.meta.env.VITE_BASIC_PATH_CATEGORY_ITEM +
+                "cards/" +
+                item.cardImg
+              }
+              alt={item.cardAlt}
+            />
             <p>{item.category}</p>
-          </a>
+          </Link>
         </div>
       ) : (
         <div className="category-header">
           {item.linkActive ? (
-            <a href={baseUrl + item.url}>
-              <img src={headerPath + item.headerImg} alt={item.headerAlt} />
+            <Link to={import.meta.env.VITE_BASE_URL + item.category}>
+              <img
+                src={
+                  import.meta.env.VITE_BASIC_PATH_CATEGORY_ITEM +
+                  "headers/" +
+                  item.headerImg
+                }
+                alt={item.headerAlt}
+              />
               <h3>{item.title}</h3>
-            </a>
+            </Link>
           ) : (
             <div>
-              <img src={headerPath + item.headerImg} alt={item.headerAlt} />
+              <img
+                src={
+                  import.meta.env.VITE_BASIC_PATH_CATEGORY_ITEM +
+                  "headers/" +
+                  item.headerImg
+                }
+                alt={item.headerAlt}
+              />
               <h3>{item.title}</h3>
             </div>
           )}
