@@ -2,4 +2,7 @@
   width: 100%;
   padding-inline: 1rem;
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }

@@ -1,0 +1,11 @@
+@import '../colors';
+
+.basicLink {
+  color: $blueLight;
+  text-decoration: none;
+
+  &:hover {
+    color: $orangeRed;
+    text-decoration: underline;
+  }
+}
