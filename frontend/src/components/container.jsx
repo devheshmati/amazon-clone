@@ -1,9 +1,9 @@
-import '../styles/container.scss';
+import "../styles/container.scss";
 
-export default function Container({children}) {
+export default function Container({ className, style, children }) {
   return (
     <>
-      <div className="container">{children}</div>
+      <div className={`${className && className} container`} style={style && style}>{children}</div>
     </>
-  )
+  );
 }

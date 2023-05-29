@@ -1,0 +1,16 @@
+.productItem {
+  display: inline-block;
+  max-width: 270px;
+  max-height: 200px;
+  vertical-align: middle;
+  margin-right: 10px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+  a {
+    img {
+      width: 100%;
+    }
+  }
+}

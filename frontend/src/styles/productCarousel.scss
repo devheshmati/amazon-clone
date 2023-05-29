@@ -1,0 +1,45 @@
+@import "./colors";
+
+.productCarousel {
+  position: relative;
+  font-family: "Amazon Ember";
+  overflow: hidden;
+  padding: 1.5rem;
+  background-color: $white;
+
+  h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .productWrapper {
+    white-space: nowrap;
+    overflow-x: scroll;
+    height: 220px;
+  }
+
+  button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 50%;
+    width: 50px;
+    background-color: $white;
+    border: 2px solid transparent;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    &.prevBtn {
+      left: 1.5rem;
+      box-shadow: 3px 3px 10px $btnShadow;
+    }
+
+    &.nextBtn {
+      right: 1.5rem;
+      box-shadow: -3px 3px 10px $btnShadow;
+    }
+  }
+}

@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { Outlet, Link } from "react-router-dom";
 import "../styles/mainSlider.scss";
 import { Icon } from "@iconify/react";
+import { smokeyOverlay } from "../styles/modules/fadeBackground.module.scss";
 
 export default function MainSlider({ data }) {
   const [indexNum, setIndexNum] = useState(0);
