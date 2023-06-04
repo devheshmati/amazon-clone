@@ -1,51 +1,82 @@
 import "../styles/productCarousel.scss";
 import ProductItem from "../components/productItem";
-import BookProductItem from "../components/bookProductItem";
 import { Icon } from "@iconify/react";
-import { useRef } from "react";
+import { useRef, useEffect, useState } from "react";
 
 export default function ProductCarousel({ data }) {
+  const [scrollStatus, setScrollStatus] = useState("left");
+  const productCarousel = useRef();
   const productWrapper = useRef();
-  let scrollAmount = 0;
+  const styleBtnDisabled = {
+    opacity: 0.4,
+  };
+
+  useEffect(() => {
+    scrollCheck();
+  }, []);
 
   const handleClick = (str) => {
-    {
-      str === "left"
-        ? productWrapper.current.scrollTo({
-          left: (scrollAmount +=
-            (productWrapper.current.offsetWidth /
-              (data.products.length / 2)) *
-            10),
-          behavior: "smooth",
-        })
-        : productWrapper.current.scrollTo({
-          left: (scrollAmount -=
-            (productWrapper.current.offsetWidth /
-              (data.products.length / 2)) *
-            10),
-          behavior: "smooth",
-        });
+    const scrollVelocity = 6;
+    str === "left"
+      ? (productWrapper.current.scrollLeft -=
+          (productWrapper.current.scrollWidth / data.products.length) *
+          scrollVelocity)
+      : (productWrapper.current.scrollLeft +=
+          (productWrapper.current.scrollWidth / data.products.length) *
+          scrollVelocity);
+  };
+
+  const handleScroll = () => {
+    const carouselOffset =
+      window.innerWidth - productCarousel.current.offsetWidth;
+    const wrapperFullWidth =
+      productWrapper.current.scrollWidth -
+      productCarousel.current.offsetWidth +
+      carouselOffset +
+      1;
+
+    scrollCheck(wrapperFullWidth);
+  };
+
+  const scrollCheck = (num) => {
+    const scrollLeft = productWrapper.current.scrollLeft;
+    if (scrollLeft === 0) {
+      setScrollStatus((state) => (state = "left"));
+    } else if (scrollLeft >= num) {
+      setScrollStatus((state) => (state = "right"));
+    } else {
+      setScrollStatus((state) => (state = "middle"));
     }
   };
 
   return (
-    <div className="productCarousel">
+    <div ref={productCarousel} className="productCarousel">
       <div>
         <h3>{data.category}</h3>
       </div>
-      <div ref={productWrapper} className="productWrapper">
-        {data.type === "book"
-          ? data.products.map((item, index) => (
-            <BookProductItem key={index} data={item} />
-          ))
-          : data.products.map((item, index) => (
-            <ProductItem key={index} data={item} />
-          ))}
+      <div
+        ref={productWrapper}
+        className="productWrapper"
+        onScroll={(e) => handleScroll(e)}
+      >
+        {data.products.map((item, index) => (
+          <ProductItem key={index} data={item} type={data.type} />
+        ))}
       </div>
-      <button onClick={() => handleClick("left")} className="prevBtn">
+      <button
+        style={scrollStatus === "left" ? styleBtnDisabled : null}
+        disabled={scrollStatus === "left" ? true : false}
+        onClick={() => handleClick("left")}
+        className="prevBtn"
+      >
         <Icon icon="basil:caret-left-solid" />
       </button>
-      <button onClick={() => handleClick("right")} className="nextBtn">
+      <button
+        style={scrollStatus === "right" ? styleBtnDisabled : null}
+        disabled={scrollStatus === "right" ? true : false}
+        onClick={() => handleClick("right")}
+        className="nextBtn"
+      >
         <Icon icon="basil:caret-left-solid" hFlip={true} />
       </button>
     </div>

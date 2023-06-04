@@ -15,7 +15,8 @@
   .productWrapper {
     white-space: nowrap;
     overflow-x: scroll;
-    height: 220px;
+    max-height: 220px;
+    scroll-behavior: smooth;
   }
 
   button {

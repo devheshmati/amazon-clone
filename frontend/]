@@ -1,0 +1,43 @@
+import "../styles/productCarousel.scss";
+import ProductItem from "../components/productItem";
+import { Icon } from "@iconify/react";
+import { useRef, useEffect, useState } from "react";
+
+export default function ProductCarousel({ data }) {
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const productCarousel = useRef();
+  const productWrapper = useRef();
+  const offsetCarouselFrame =
+    window.innerWidth - productCarousel.current.offsetWidth;
+  const carouselFullWidth =
+    productCarousel.current.offsetWidth -
+    productWrapper.current.scrollWidth +
+    offsetCarouselFrame;
+
+  const handleScroll = (e) => {
+    console.log(carouselFullWidth);
+  };
+
+  return (
+    <div ref={productCarousel} className="productCarousel">
+      <div>
+        <h3>{data.category}</h3>
+      </div>
+      <div
+        ref={productWrapper}
+        className="productWrapper"
+        onScroll={(e) => handleScroll(e)}
+      >
+        {data.products.map((item, index) => (
+          <ProductItem key={index} data={item} type={data.type} />
+        ))}
+      </div>
+      <button onClick={() => handleClick("left")} className="prevBtn">
+        <Icon icon="basil:caret-left-solid" />
+      </button>
+      <button onClick={() => handleClick("right")} className="nextBtn">
+        <Icon icon="basil:caret-left-solid" hFlip={true} />
+      </button>
+    </div>
+  );
+}
