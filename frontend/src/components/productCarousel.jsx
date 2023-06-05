@@ -27,6 +27,10 @@ export default function ProductCarousel({ data }) {
   };
 
   const handleScroll = () => {
+    scrollCheck();
+  };
+
+  const scrollCheck = () => {
     const carouselOffset =
       window.innerWidth - productCarousel.current.offsetWidth;
     const wrapperFullWidth =
@@ -34,15 +38,11 @@ export default function ProductCarousel({ data }) {
       productCarousel.current.offsetWidth +
       carouselOffset +
       1;
-
-    scrollCheck(wrapperFullWidth);
-  };
-
-  const scrollCheck = (num) => {
     const scrollLeft = productWrapper.current.scrollLeft;
+
     if (scrollLeft === 0) {
       setScrollStatus((state) => (state = "left"));
-    } else if (scrollLeft >= num) {
+    } else if (scrollLeft >= wrapperFullWidth) {
       setScrollStatus((state) => (state = "right"));
     } else {
       setScrollStatus((state) => (state = "middle"));
