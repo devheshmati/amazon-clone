@@ -1,14 +1,14 @@
 import { Outlet, Link } from "react-router-dom";
-import "../styles/productItem.scss";
+import "../styles/productItemNonRegulared.scss";
 
-export default function ProductItem({ data, type }) {
+export default function ProductItem({ data, type, isRegular }) {
   const basicPath = import.meta.env.VITE_LANDING_PAGE_IMG_BASE_URL;
   //
-  const bookPath = basicPath + `books/${data.id}/` + data.img;
+  const bookPath = basicPath + `products/b${data.id}/` + data.img;
   const productPath = basicPath + `products/${data.id}/` + data.img;
 
   return (
-    <div className="productItem">
+    <div className="productItemNonRegulared">
       <Link to={data.id}>
         <img src={type === "book" ? bookPath : productPath} alt={data.imgAlt} />
       </Link>

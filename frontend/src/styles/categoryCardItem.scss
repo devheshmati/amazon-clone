@@ -1,7 +1,7 @@
 @import "./colors";
 
 .categoryCardItem {
-  font-family: 'Amazon Ember';
+  font-family: "Amazon Ember";
   height: 420px;
   img {
     width: 100%;
@@ -57,31 +57,9 @@
         text-decoration: none;
         gap: 0.2rem;
 
-        .topDealInfo {
-          font-size: 12px;
-          display: flex;
-          align-items: center;
-          gap: 0.5rem;
-
-          :nth-child(1) {
-            padding: 0.3rem 0.5rem;
-            background-color: $red;
-            color: $white;
-          }
-
-          :nth-child(2) {
-            color: $red;
-            font-weight: bold;
-          }
-        }
-
         p {
           font-size: 13px;
           color: $dark;
-        }
-
-        .dealInfo {
-          font-size: 12px;
         }
       }
     }
@@ -101,7 +79,7 @@
         text-decoration: none;
         color: $dark;
         font-size: 13px;
-        font-family: 'Amazon Ember'
+        font-family: "Amazon Ember";
       }
 
       img {

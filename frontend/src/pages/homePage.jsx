@@ -128,16 +128,6 @@ export default function HomePage() {
       titleLink: "See all deals",
       url: "#",
     },
-    // {
-    //   type: "card",
-    //   title: "Beauty picks",
-    //   img: "Fuji_Dash_Beauty_1x._SY304_CB432774351_.jpg",
-    //   imgAlt: "Fuji Dash Beauty image",
-    //   imgLink: "#imgLink",
-    //   isDiscount: false,
-    //   titleLink: "Shop now",
-    //   url: "#cardItem",
-    // },
     {
       type: "ads",
       title: "Sign in for the best experience",
@@ -236,9 +226,97 @@ export default function HomePage() {
     },
   ];
 
+  const categoryData3 = [
+    {
+      type: "card",
+      title: "Beauty picks",
+      img: "Fuji_Dash_Toys_1X._SY304_CB639759658_.jpg",
+      imgAlt: "Fuji dash Toys image",
+      imgLink: "#imgLink",
+      isDiscount: false,
+      titleLink: "Shop now",
+      url: "#cardItem",
+    },
+    {
+      type: "card",
+      title: "Descover fashion trends",
+      img: "mp_20230219_ff_desktopsinglecategory_desktop_379x304_1._SY304_CB612639047_.jpg",
+      imgAlt: "two women with yellow and blue dress image",
+      imgLink: "#imgLink",
+      isDiscount: false,
+      titleLink: "See more",
+      url: "#cardItem",
+    },
+    {
+      type: "card",
+      title: "Health & Personal Care",
+      img: "GW_CONS_AUS_HPC_HPCEssentials_CatCard_Desktop1x._SY304_CB627424361_.jpg",
+      imgAlt: "GW CONS AUS HPC HPSEssentials CatCard image",
+      imgLink: "#imgLink",
+      isDiscount: false,
+      titleLink: "Shop now",
+      url: "#cardItem",
+    },
+    {
+      type: "card",
+      title: "For your Fitness Needs",
+      img: "Fuji_Dash_Fitness_1X._SY304_CB639748186_.jpg",
+      imgAlt: "Fuji dash fitness image",
+      imgLink: "#imgLink",
+      isDiscount: false,
+      titleLink: "Shop Now",
+      url: "#cardItem",
+    },
+  ];
+
+  const categoryData4 = [
+    {
+      type: "card",
+      title: "Shop activity trackers and smartwatches",
+      img: "Fuji_Dash_SmartWatch_1X._SY304_CB639922137_.jpg",
+      imgAlt: "Fuji Dash smartwatch 1X image",
+      imgLink: "#imgLink",
+      isDiscount: false,
+      titleLink: "Shop now",
+      url: "#cardItem",
+    },
+    {
+      type: "card",
+      title: "Shop Laptop & Tablets",
+      img: "Fuji_Dash_Laptops_379x304_1X_en_US._SY304_CB418608471_.jpg",
+      imgAlt: "Fuji Dash Laptop 1x image",
+      imgLink: "#imgLink",
+      isDiscount: false,
+      titleLink: "See more",
+      url: "#cardItem",
+    },
+    {
+      type: "card",
+      title: "Kindle E readers",
+      img: "Fuji_Desktop_Dash_Kindle_1x._SY304_CB639752818_.jpg",
+      imgAlt: "Fuji Desktop Dash Kindle 1x image",
+      imgLink: "#imgLink",
+      isDiscount: false,
+      titleLink: "Shop now",
+      url: "#cardItem",
+    },
+    {
+      type: "card",
+      title: "Create with strip lights",
+      img: "Fuji_Dash_StripLighting_379x304_1X_en_US._SY304_CB418597476_.jpg",
+      imgAlt: "Fuji Dash Strip lighting 1x image",
+      imgLink: "#imgLink",
+      isDiscount: false,
+      titleLink: "Shop Now",
+      url: "#cardItem",
+    },
+  ];
+
   const productCarouselData1 = {
     type: "product",
-    category: "Gadgets and accessories",
+    isRegular: false,
+    isHeaderTitle: true,
+    headerTitle: "Gadgets and accessories",
     isLink: false,
     products: [
       {
@@ -444,9 +522,11 @@ export default function HomePage() {
     ],
   };
 
-  const bookProductCarouselData1 = {
+  const productCarouselData2 = {
     type: "book",
-    category: "Top Seller in Books for you",
+    isHeaderTitle: true,
+    headerTitle: "Top Seller in Books for you",
+    isRegular: false,
     isLink: false,
     products: [
       {
@@ -753,23 +833,606 @@ export default function HomePage() {
     ],
   };
 
+  const productCarouselData3 = {
+    type: "product",
+    isRegular: false,
+    isHeaderTitle: true,
+    headerTitle: "Popular products in Beauty internationally",
+    isLink: false,
+    products: [
+      {
+        id: 21,
+        img: "61ijcIHUbbL._AC_SY200_.jpg",
+        imgAlt:
+          "Mielle Organics Rosemary Mint Scalp & Hair Strengthening Oil image",
+        price: 249.0,
+        isDiscount: false,
+        discount: { count: 40, isTopDeal: false },
+        isTitle: false,
+        title: "Mielle Organics Rosemary Mint Scalp & Hair Strengthening Oil",
+      },
+      {
+        id: 22,
+        img: "71gyn2vWgoL._AC_SY200_.jpg",
+        imgAlt: "CeraVe Tinted Sunscreen with SPF 30 image",
+        price: 249.0,
+        isDiscount: false,
+        discount: { count: 40, isTopDeal: false },
+        isTitle: false,
+        title: "CeraVe Tinted Sunscreen with SPF 30",
+      },
+      {
+        id: 23,
+        img: "719pUQCxnmL._AC_SY200_.jpg",
+        imgAlt: "Waterpik Aquarius Water Flosser Professional image",
+        price: 249.0,
+        isDiscount: false,
+        discount: { count: 40, isTopDeal: false },
+        isTitle: false,
+        title: "Waterpik Aquarius Water Flosser Professional",
+      },
+      {
+        id: 24,
+        img: "61A+sJ7zDWL._AC_SY200_.jpg",
+        imgAlt: "JOESOEF SKIN CARE Sulfur Soap image",
+        price: 249.0,
+        isDiscount: false,
+        discount: { count: 40, isTopDeal: false },
+        isTitle: false,
+        title: "JOESOEF SKIN CARE Sulfur Soap",
+      },
+      {
+        id: 25,
+        img: "51LAALy+vwL._AC_SY200_.jpg",
+        imgAlt: "ROUND LAB Birch Juice Moisturizing Sunscreen image",
+        price: 249.0,
+        isDiscount: false,
+        discount: { count: 40, isTopDeal: false },
+        isTitle: false,
+        title: "ROUND LAB Birch Juice Moisturizing Sunscreen",
+      },
+      {
+        id: 26,
+        img: "61qO-aag2bL._AC_SY200_.jpg",
+        imgAlt: "Neutrogena Purescreen+ Tinted Sunscreen image",
+        price: 249.0,
+        isDiscount: false,
+        discount: { count: 40, isTopDeal: false },
+        isTitle: false,
+        title: "Neutrogena Purescreen+ Tinted Sunscreen",
+      },
+      {
+        id: 27,
+        img: "81dNZ4pqewL._AC_SY200_.jpg",
+        imgAlt: "Ambi Even & Clear Fade Cream image",
+        price: 249.0,
+        isDiscount: false,
+        discount: { count: 40, isTopDeal: false },
+        isTitle: false,
+        title: "Ambi Even & Clear Fade Cream",
+      },
+      {
+        id: 28,
+        img: "71yucxIWbGL._AC_SY200_.jpg",
+        imgAlt: "OH! SWEET ART - Edible Petal Dust image",
+        price: 249.0,
+        isDiscount: false,
+        discount: { count: 40, isTopDeal: false },
+        isTitle: false,
+        title: "OH! SWEET ART - Edible Petal Dust",
+      },
+      {
+        id: 29,
+        img: "51fQagfGlQL._AC_SY200_.jpg",
+        imgAlt: "Lumineux Teeth Whitening Strips 7 Treatments image",
+        price: 249.0,
+        isDiscount: false,
+        discount: { count: 40, isTopDeal: false },
+        isTitle: false,
+        title: "Lumineux Teeth Whitening Strips 7 Treatments",
+      },
+      {
+        id: 30,
+        img: "71+CaUj9EtL._AC_SY200_.jpg",
+        imgAlt: "Nizoral Anti-Dandruff Shampoo with 1% Ketoconazole image",
+        price: 249.0,
+        isDiscount: false,
+        discount: { count: 40, isTopDeal: false },
+        isTitle: false,
+        title: "Nizoral Anti-Dandruff Shampoo with 1% Ketoconazole",
+      },
+      {
+        id: 31,
+        img: "81L8Qmoa7xL._AC_SY200_.jpg",
+        imgAlt:
+          "CeraVe 100% Mineral Sunscreen SPF 50 | Face Sunscreen with Zinc Oxide & Titanium Dioxide image",
+        price: 249.0,
+        isDiscount: false,
+        discount: { count: 40, isTopDeal: false },
+        isTitle: false,
+        title:
+          "CeraVe 100% Mineral Sunscreen SPF 50 | Face Sunscreen with Zinc Oxide & Titanium Dioxide",
+      },
+      {
+        id: 32,
+        img: "71l5PzOBvWL._AC_SY200_.jpg",
+        imgAlt:
+          "Certain Dri Prescription Strength Clinical Antiperspirant Roll-On Deodorant image",
+        price: 249.0,
+        isDiscount: false,
+        discount: { count: 40, isTopDeal: false },
+        isTitle: false,
+        title:
+          "Certain Dri Prescription Strength Clinical Antiperspirant Roll-On Deodorant",
+      },
+      {
+        id: 33,
+        img: "71SmBhXzwnL._AC_SY200_.jpg",
+        imgAlt:
+          "Neutrogena Hydro Boost Hyaluronic Acid Facial Moisturizer with Broad Spectrum SPF 50 Sunscreen image",
+        price: 249.0,
+        isDiscount: false,
+        discount: { count: 40, isTopDeal: false },
+        isTitle: false,
+        title:
+          "Neutrogena Hydro Boost Hyaluronic Acid Facial Moisturizer with Broad Spectrum SPF 50 Sunscreen",
+      },
+      {
+        id: 34,
+        img: "51eJ3Wbi1CL._AC_SY200_.jpg",
+        imgAlt: "CeraVe Body Wash with Salicylic Acid image",
+        price: 249.0,
+        isDiscount: false,
+        discount: { count: 40, isTopDeal: false },
+        isTitle: false,
+        title: "CeraVe Body Wash with Salicylic Acid",
+      },
+      {
+        id: 35,
+        img: "51FDQ4URb8L._AC_SY200_.jpg",
+        imgAlt: "Samnyte Hair Wax Stick, Wax Stick for Hair Slick Stick image",
+        price: 249.0,
+        isDiscount: false,
+        discount: { count: 40, isTopDeal: false },
+        isTitle: false,
+        title: "Samnyte Hair Wax Stick, Wax Stick for Hair Slick Stick",
+      },
+      {
+        id: 36,
+        img: "81GYltqM5HL._AC_SY200_.jpg",
+        imgAlt:
+          "Biore UV Aqua Rich Watery 50 g Sunscreen SPF 50 + / PA ++++ image",
+        price: 249.0,
+        isDiscount: false,
+        discount: { count: 40, isTopDeal: false },
+        isTitle: false,
+        title: "Biore UV Aqua Rich Watery 50 g Sunscreen SPF 50 + / PA ++++",
+      },
+      {
+        id: 37,
+        img: "617J3FspKwL._AC_SY200_.jpg",
+        imgAlt: "NATURE WELL Clinical Retinol Advanced Moisture Cream image",
+        price: 249.0,
+        isDiscount: false,
+        discount: { count: 40, isTopDeal: false },
+        isTitle: false,
+        title: "NATURE WELL Clinical Retinol Advanced Moisture Cream",
+      },
+      {
+        id: 38,
+        img: "41B8vDMnHHL._AC_SY200_.jpg",
+        imgAlt: "ISNTREE Hyaluronic Acid Watery Sun Gel 50ml 1.69fl.oz image",
+        price: 249.0,
+        isDiscount: false,
+        discount: { count: 40, isTopDeal: false },
+        isTitle: false,
+        title: "ISNTREE Hyaluronic Acid Watery Sun Gel 50ml 1.69fl.oz",
+      },
+      {
+        id: 39,
+        img: "71rapNz9xBL._AC_SY200_.jpg",
+        imgAlt:
+          "Undefined Beauty R&R Sun Serum Tinted Mineral Broad Spectrum Sunscreen image",
+        price: 249.0,
+        isDiscount: false,
+        discount: { count: 40, isTopDeal: false },
+        isTitle: false,
+        title:
+          "Undefined Beauty R&R Sun Serum Tinted Mineral Broad Spectrum Sunscreen",
+      },
+      {
+        id: 40,
+        img: "71A-OkDQNAL._AC_SY200_.jpg",
+        imgAlt:
+          "SeoulCeuticals Korean Skin Care Beauty - 20% Vitamin C Hyaluronic Acid Serum image",
+        price: 249.0,
+        isDiscount: false,
+        discount: { count: 40, isTopDeal: false },
+        isTitle: false,
+        title:
+          "SeoulCeuticals Korean Skin Care Beauty - 20% Vitamin C Hyaluronic Acid Serum",
+      },
+      {
+        id: 41,
+        img: "51eiNHvdPEL._AC_SY200_.jpg",
+        imgAlt:
+          "Differin Acne Skin Care Set, Differin Gel 3 Step Regimen, Acne Treatment, Sunscreen image",
+        price: 249.0,
+        isDiscount: false,
+        discount: { count: 40, isTopDeal: false },
+        isTitle: false,
+        title:
+          "Differin Acne Skin Care Set, Differin Gel 3 Step Regimen, Acne Treatment, Sunscreen",
+      },
+      {
+        id: 42,
+        img: "71MO9L6fe-L._AC_SY200_.jpg",
+        imgAlt:
+          "Hawaiian Tropic SPF 4 Sunscreen, Protective Dark Tannning Sunscreen Lotion 8 Ounces image",
+        price: 249.0,
+        isDiscount: false,
+        discount: { count: 40, isTopDeal: false },
+        isTitle: false,
+        title:
+          "Hawaiian Tropic SPF 4 Sunscreen, Protective Dark Tannning Sunscreen Lotion 8 Ounces",
+      },
+      {
+        id: 43,
+        img: "41T+wF5mzKL._AC_SY200_.jpg",
+        imgAlt: "Caro White Lightening Beauty Cream 500 ml image",
+        price: 249.0,
+        isDiscount: false,
+        discount: { count: 40, isTopDeal: false },
+        isTitle: false,
+        title: "Caro White Lightening Beauty Cream 500 ml",
+      },
+      {
+        id: 44,
+        img: "710dwZWgv2L._AC_SY200_.jpg",
+        imgAlt:
+          "Abib Quick Sunstick Protection Bar SPF50+ 0.78 Oz / 22g I Sun Protection image",
+        price: 249.0,
+        isDiscount: false,
+        discount: { count: 40, isTopDeal: false },
+        isTitle: false,
+        title:
+          "Abib Quick Sunstick Protection Bar SPF50+ 0.78 Oz / 22g I Sun Protection",
+      },
+      {
+        id: 45,
+        img: "61mEC3VhXIL._AC_SY200_.jpg",
+        imgAlt:
+          "Advanced Clinicals Retinol Body Lotion Moisturizer Face Lotion & Body Cream image",
+        price: 249.0,
+        isDiscount: false,
+        discount: { count: 40, isTopDeal: false },
+        isTitle: false,
+        title:
+          "Advanced Clinicals Retinol Body Lotion Moisturizer Face Lotion & Body Cream",
+      },
+      {
+        id: 46,
+        img: "51mEmDBAqFL._AC_SY200_.jpg",
+        imgAlt: "SKIN1004 Hyalu-CICA Water-fit Sun Serum 1.69 fl. oz image",
+        price: 249.0,
+        isDiscount: false,
+        discount: { count: 40, isTopDeal: false },
+        isTitle: false,
+        title: "SKIN1004 Hyalu-CICA Water-fit Sun Serum 1.69 fl. oz",
+      },
+      {
+        id: 47,
+        img: "71Z-Dmc7RoL._AC_SY200_.jpg",
+        imgAlt:
+          "CeraVe Moisturizing Cream | Body and Face Moisturizer for Dry Skin image",
+        price: 249.0,
+        isDiscount: false,
+        discount: { count: 40, isTopDeal: false },
+        isTitle: false,
+        title:
+          "CeraVe Moisturizing Cream | Body and Face Moisturizer for Dry Skin",
+      },
+      {
+        id: 48,
+        img: "519qaXPakML._AC_SY200_.jpg",
+        imgAlt: "Hawaiian Tropic Mineral Powder Sunscreen Brush, SPF 30 image",
+        price: 249.0,
+        isDiscount: false,
+        discount: { count: 40, isTopDeal: false },
+        isTitle: false,
+        title: "Hawaiian Tropic Mineral Powder Sunscreen Brush, SPF 30",
+      },
+      {
+        id: 49,
+        img: "71TAYmz9znL._AC_SY200_.jpg",
+        imgAlt: "PanOxyl 10% Acne Foaming Wash 5.5 Ounce image",
+        price: 249.0,
+        isDiscount: false,
+        discount: { count: 40, isTopDeal: false },
+        isTitle: false,
+        title: "PanOxyl 10% Acne Foaming Wash 5.5 Ounce",
+      },
+      {
+        id: 50,
+        img: "71fyxuOu-yL._AC_SY200_.jpg",
+        imgAlt:
+          "Organic Aloe Vera Gel from freshly cut 100% Pure Aloe - Big 12oz image",
+        price: 249.0,
+        isDiscount: false,
+        discount: { count: 40, isTopDeal: false },
+        isTitle: false,
+        title:
+          "Organic Aloe Vera Gel from freshly cut 100% Pure Aloe - Big 12oz",
+      },
+    ],
+  };
+
+  const productCarouselData4 = {
+    type: "product",
+    isRegular: true,
+    isHeaderTitle: true,
+    headerTitle: "Deal Under 25$",
+    isLink: true,
+    linkInfo: {
+      title: "See more",
+      url: "#",
+    },
+    products: [
+      {
+        id: 51,
+        img: "31t6E0EsnQL._AC_SY200_.jpg",
+        imgAlt: "Neutrogena Fragrance-Free Body Oil Light Sesame Formula image",
+        isPrice: true,
+        isDiscount: true,
+        isTitle: true,
+        price: 15.49,
+        discount: { count: 22, isTopDeal: false },
+        title: "Neutrogena Fragrance-Free Body Oil Light Sesame Formula",
+      },
+      {
+        id: 52,
+        img: "51jLoGfBwrL._AC_SY200_.jpg",
+        imgAlt:
+          "SAS Survival Handbook, Third Edition: The Ultimate Guide to Surviving Anywhere image",
+        isPrice: true,
+        isDiscount: true,
+        isTitle: true,
+        price: 23.99,
+        discount: { count: 35, isTopDeal: false },
+        title:
+          "SAS Survival Handbook, Third Edition: The Ultimate Guide to Surviving Anywhere",
+      },
+      {
+        id: 53,
+        img: "51uamwnnEyL._AC_SY200_.jpg",
+        imgAlt: "OGX Extra Strength Damage Remedy image",
+        isPrice: true,
+        isDiscount: true,
+        isTitle: true,
+        price: 17.98,
+        discount: { count: 22, isTopDeal: false },
+        title: "OGX Extra Strength Damage Remedy",
+      },
+      {
+        id: 54,
+        img: "51gCrqjIHlL._AC_SY200_.jpg",
+        imgAlt: "The True Love Experiment Hardcover image",
+        isPrice: true,
+        isDiscount: true,
+        isTitle: true,
+        price: 27.99,
+        discount: { count: 43, isTopDeal: false },
+        title: "The True Love Experiment Hardcover",
+      },
+      {
+        id: 55,
+        img: "41OHtuW7j+L._AC_SY200_.jpg",
+        imgAlt:
+          "The Art of Clear Thinking: A Stealth Fighter Pilot's Timeless Rules image",
+        isPrice: true,
+        isDiscount: true,
+        isTitle: true,
+        price: 29.0,
+        discount: { count: 31, isTopDeal: false },
+        title:
+          "The Art of Clear Thinking: A Stealth Fighter Pilot's Timeless Rules",
+      },
+      {
+        id: 56,
+        img: "31kAbHK2GoL._AC_SY200_.jpg",
+        imgAlt:
+          "Design Essentials Peppermint & Aloe TherapeuticsSoothing Scalp Tonic image",
+        isPrice: true,
+        isDiscount: true,
+        isTitle: true,
+        price: 11.67,
+        discount: { count: 18, isTopDeal: false },
+        title:
+          "Design Essentials Peppermint & Aloe TherapeuticsSoothing Scalp Tonic",
+      },
+      {
+        id: 57,
+        img: "61K8iw-FrHL._AC_SY200_.jpg",
+        imgAlt: "Hydro Swirl Spinning Sprinkler image",
+        isPrice: true,
+        isDiscount: true,
+        isTitle: true,
+        price: 19.99,
+        discount: { count: 19, isTopDeal: false },
+        title: "Hydro Swirl Spinning Sprinkler",
+      },
+      {
+        id: 58,
+        img: "51MemyB9NuL._AC_SY200_.jpg",
+        imgAlt: "Unicorn Academy: Rainbow of Adventure Boxed Set image",
+        isPrice: true,
+        isDiscount: true,
+        isTitle: true,
+        price: 23.96,
+        discount: { count: 48, isTopDeal: false },
+        title: "Unicorn Academy: Rainbow of Adventure Boxed Set",
+      },
+      {
+        id: 59,
+        img: "51BgYBpb5wL._AC_SY200_.jpg",
+        imgAlt:
+          "World War II: The Definitive Visual History from Blitzkrieg to the Atom Bomb image",
+        isPrice: true,
+        isDiscount: true,
+        isTitle: true,
+        price: 40.0,
+        discount: { count: 41, isTopDeal: false },
+        title:
+          "World War II: The Definitive Visual History from Blitzkrieg to the Atom Bomb",
+      },
+      {
+        id: 60,
+        img: "51m66FN-XlL._AC_SY200_.jpg",
+        imgAlt: "Star Trek: Lower Decks - Season Two image",
+        isPrice: true,
+        isDiscount: true,
+        isTitle: true,
+        price: 31.99,
+        discount: { count: 35, isTopDeal: false },
+        title: "Star Trek: Lower Decks - Season Two",
+      },
+      {
+        id: 61,
+        img: "51JqtRoDtcL._AC_SY200_.jpg",
+        imgAlt: "Rick Steves Belgium: Bruges, Brussels image",
+        isPrice: true,
+        isDiscount: true,
+        isTitle: true,
+        price: 21.99,
+        discount: { count: 20, isTopDeal: false },
+        title: "Rick Steves Belgium: Bruges, Brussels",
+      },
+      {
+        id: 62,
+        img: "51i75e4FPlL._AC_SY200_.jpg",
+        imgAlt:
+          "Recipes from the World of Tolkien: Inspired by the Legends Hardcover image",
+        isPrice: true,
+        isDiscount: true,
+        isTitle: true,
+        price: 28.99,
+        discount: { count: 24, isTopDeal: false },
+        title:
+          "Recipes from the World of Tolkien: Inspired by the Legends Hardcover",
+      },
+      {
+        id: 63,
+        img: "41kQCepiZhL._AC_SY200_.jpg",
+        imgAlt: "Colageina 10 Glissé Instant Wrinkle Remover image",
+        isPrice: true,
+        isDiscount: true,
+        isTitle: true,
+        price: 21.99,
+        discount: { count: 11, isTopDeal: false },
+        title: "Colageina 10 Glissé Instant Wrinkle Remover",
+      },
+      {
+        id: 64,
+        img: "31v1AWjr4eL._AC_SY200_.jpg",
+        imgAlt: "Callaway Swing Easy Golf Swing Trainer Aid, Orange image",
+        isPrice: true,
+        isDiscount: true,
+        isTitle: true,
+        price: 19.99,
+        discount: { count: 35, isTopDeal: false },
+        title: "Callaway Swing Easy Golf Swing Trainer Aid, Orange",
+      },
+      {
+        id: 65,
+        img: "31X+r-QWtmL._AC_SY200_.jpg",
+        imgAlt: "Prince Lionheart Dresser Top Diaper Depot image",
+        isPrice: true,
+        isDiscount: true,
+        isTitle: true,
+        price: 22.99,
+        discount: { count: 17, isTopDeal: false },
+        title: "Prince Lionheart Dresser Top Diaper Depot",
+      },
+      {
+        id: 66,
+        img: "41NrZGA0TCL._AC_SY200_.jpg",
+        imgAlt: "Girls Like Girls Hardcover image",
+        isPrice: true,
+        isDiscount: true,
+        isTitle: true,
+        price: 20.0,
+        discount: { count: 25, isTopDeal: false },
+        title: "Girls Like Girls Hardcover",
+      },
+      {
+        id: 67,
+        img: "51AhljgumyL._AC_SY200_.jpg",
+        imgAlt: "Just Help!: How to Build a Better World image",
+        isPrice: true,
+        isDiscount: true,
+        isTitle: true,
+        price: 17.99,
+        discount: { count: 38, isTopDeal: false },
+        title: "Just Help!: How to Build a Better World",
+      },
+      {
+        id: 68,
+        img: "51FFBmgJrVL._AC_SY200_.jpg",
+        imgAlt:
+          "Sistema Microwave Soup Mug with Lid and Steam Release Vent image",
+        isPrice: true,
+        isDiscount: true,
+        isTitle: true,
+        price: 13.99,
+        discount: { count: 16, isTopDeal: false },
+        title: "Sistema Microwave Soup Mug with Lid and Steam Release Vent",
+      },
+      {
+        id: 69,
+        img: "41NQXlil-gS._AC_UF226,226_FMjpg_.jpg",
+        imgAlt: "LilyAna Naturals Eye Cream image",
+        isPrice: true,
+        isDiscount: true,
+        isTitle: true,
+        price: 24.99,
+        discount: { count: 32, isTopDeal: false },
+        title: "LilyAna Naturals Eye Cream",
+      },
+      {
+        id: 70,
+        img: "41Lh0-CPmFL._AC_UF226,226_FMjpg_.jpg",
+        imgAlt: "MelodySusie Electric Nail Drill Machine 11 in 1 Kit image",
+        isPrice: true,
+        isDiscount: true,
+        isTitle: true,
+        price: 29.99,
+        discount: { count: 30, isTopDeal: false },
+        title: "MelodySusie Electric Nail Drill Machine 11 in 1 Kit",
+      },
+    ],
+  };
+
   return (
     <>
       <Header />
       <Main>
         <Container className={smokeyFadeBackground}>
           <MainSlider data={sliderData} />
-          <Gapper style={{ position: "relative", top: "-17rem" }}>
+          <Gapper style={{ position: "relative", marginTop: "-17rem" }}>
             <InfoLink data={infoLinkData} />
             <CategoryCard data={categoryData1} />
             <CategoryCard data={categoryData2} />
             <ProductCarousel data={productCarouselData1} />
-            <ProductCarousel data={bookProductCarouselData1} />
+            <ProductCarousel data={productCarouselData2} />
+            <CategoryCard data={categoryData3} />
+            <ProductCarousel data={productCarouselData3} />
+            <ProductCarousel data={productCarouselData4} isRegular={true} />
+            <CategoryCard data={categoryData4} />
           </Gapper>
         </Container>
       </Main>
 
-      <Footer />
+      <Footer window />
     </>
   );
 }

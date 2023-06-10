@@ -1,9 +1,12 @@
 import "../styles/productCarousel.scss";
-import ProductItem from "../components/productItem";
+import ProductItemRegulared from "../components/productItemRegulared";
+import ProductItemNonRegulared from "../components/productItemNonRegulared";
 import { Icon } from "@iconify/react";
 import { useRef, useEffect, useState } from "react";
+import { Outlet, Link } from "react-router-dom";
+import { basicLink } from "../styles/modules/link.module.scss";
 
-export default function ProductCarousel({ data }) {
+export default function ProductCarousel({ data, isRegular }) {
   const [scrollStatus, setScrollStatus] = useState("left");
   const productCarousel = useRef();
   const productWrapper = useRef();
@@ -51,17 +54,28 @@ export default function ProductCarousel({ data }) {
 
   return (
     <div ref={productCarousel} className="productCarousel">
-      <div>
-        <h3>{data.category}</h3>
+      <div className="top-sec">
+        {data.isHeaderTitle && <h3>{data.headerTitle}</h3>}
+        {data.isLink && (
+          <Link className={basicLink} to={data.linkInfo.url}>{data.linkInfo.title}</Link>
+        )}
       </div>
       <div
         ref={productWrapper}
         className="productWrapper"
         onScroll={(e) => handleScroll(e)}
       >
-        {data.products.map((item, index) => (
-          <ProductItem key={index} data={item} type={data.type} />
-        ))}
+        {isRegular === true
+          ? data.products.map((item, index) => (
+              <ProductItemRegulared key={index} data={item} type={data.type} />
+            ))
+          : data.products.map((item, index) => (
+              <ProductItemNonRegulared
+                key={index}
+                data={item}
+                type={data.type}
+              />
+            ))}
       </div>
       <button
         style={scrollStatus === "left" ? styleBtnDisabled : null}
@@ -79,6 +93,7 @@ export default function ProductCarousel({ data }) {
       >
         <Icon icon="basil:caret-left-solid" hFlip={true} />
       </button>
+      <Outlet />
     </div>
   );
 }

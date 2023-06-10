@@ -7,15 +7,36 @@
   padding: 1.5rem;
   background-color: $white;
 
-  h3 {
-    font-size: 1.3rem;
+  ::-webkit-scrollbar {
+    height: 0.5rem;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: $smoke;
+    border-radius: 0.5rem;
+
+    &:hover {
+      background-color: $smokeNeo;
+    }
+  }
+
+  .top-sec {
     margin-bottom: 1rem;
+
+    * {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    h3 {
+      font-size: 1.3rem;
+      margin-right: 1rem;
+    }
   }
 
   .productWrapper {
     white-space: nowrap;
     overflow-x: scroll;
-    max-height: 220px;
     scroll-behavior: smooth;
   }
 

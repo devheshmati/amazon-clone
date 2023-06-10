@@ -1,0 +1,13 @@
+@import './colors';
+
+.priceInfo {
+  .disc {
+    color: $smokeDark;
+  }
+
+  .prevPrice {
+    color: $smokeDark;
+    font-size: 13px;
+    text-decoration: line-through;
+  }
+}

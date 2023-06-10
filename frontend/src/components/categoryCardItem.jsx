@@ -1,6 +1,7 @@
 import "../styles/categoryCardItem.scss";
 import { Outlet, Link } from "react-router-dom";
-import linkStyle from '../styles/modules/link.module.scss';
+import linkStyle from "../styles/modules/link.module.scss";
+import DiscountInfo from "./discountInfo";
 
 export default function CategoryCardItem({ data }) {
   const basicImagePath = import.meta.env.VITE_LANDING_PAGE_IMG_BASE_URL;
@@ -32,17 +33,7 @@ export default function CategoryCardItem({ data }) {
                   src={basicImagePath + "cards/" + data.img}
                   alt={data.imgAlt}
                 />
-                {data.discount.isTopDeal ? (
-                  <div className="topDealInfo">
-                    <span>Up to ${data.discount.count}% off</span>
-                    <span>Top Deal</span>
-                  </div>
-                ) : (
-                  <div className="dealInfo">
-                    <span>`${data.discount.count}% off`</span>
-                    <span>Deal</span>
-                  </div>
-                )}
+                <DiscountInfo data={data.discount} />
                 <p>{data.discount.context}</p>
               </Link>
             </div>
@@ -68,7 +59,9 @@ export default function CategoryCardItem({ data }) {
               </Link>
             </div>
           )}
-          <Link className={linkStyle.basicLink} to={data.url}>{data.titleLink}</Link>
+          <Link className={linkStyle.basicLink} to={data.url}>
+            {data.titleLink}
+          </Link>
         </div>
       )}
 
