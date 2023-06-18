@@ -8,6 +8,7 @@ import Gapper from "../components/gapper";
 import CategoryCard from "../components/categoryCard";
 import { smokeyFadeBackground } from "../styles/modules/fadeBackground.module.scss";
 import ProductCarousel from "../components/productCarousel";
+import PageProductSlider from '../components/pageProductSlider';
 
 export default function HomePage() {
   const infoLinkData = {
@@ -18,7 +19,7 @@ export default function HomePage() {
 
   const sliderData = [
     {
-      url: "#1",
+      url: "deals/mother",
       img: "slide1.jpg",
       alt: "slidr1 image alt",
     },
@@ -312,6 +313,53 @@ export default function HomePage() {
     },
   ];
 
+  const categoryData5 = [
+    {
+      type: "card",
+      title: "Frequently repurchased in Supplies",
+      img: "618OCSwyhfL._AC_SY195_.jpg",
+      imgAlt: "MaxiFlex PIP 34-874/L glove image",
+      imgLink: "#imgLink",
+      isDiscount: false,
+      titleLink: "Shop now",
+      url: "#cardItem",
+    },
+    {
+      type: "card",
+      title: "Top Deal",
+      img: "81lKQKYwehL._AC_SY230_.jpg",
+      imgAlt: "Gillette Intimate and Venus Trimmer Pack image",
+      isDiscount: true,
+      discount: {
+        count: 40,
+        isTopDeal: true,
+        context: "Gillette Intimate and Venus Trimmer, Razors and Refills",
+      },
+      titleLink: "See all deals",
+      url: "#",
+    },
+    {
+      type: "card",
+      title: "Home refresh ideas",
+      img: "XCM_CUTTLE_1559454_3018199_379x304_1X_en_US._SY304_CB592739737_.jpg",
+      imgAlt: "Black Faucet image",
+      imgLink: "#imgLink",
+      isDiscount: false,
+      titleLink: "Shop now",
+      url: "#cardItem",
+    },
+    {
+      type: "card",
+      title: "Shop Pet supplies",
+      img: "Fuji_Dash_Pets_1X._SY304_CB639746743_.jpg",
+      imgAlt: "Brown dog with a white-black cat seat image",
+      imgLink: "#imgLink",
+      isDiscount: false,
+      titleLink: "Shop Now",
+      url: "#cardItem",
+    },
+  ];
+
   const productCarouselData1 = {
     type: "product",
     isRegular: false,
@@ -530,7 +578,7 @@ export default function HomePage() {
     isLink: false,
     products: [
       {
-        id: 1,
+        id: 101,
         img: "61pOYbCSq4L._AC_SY200_.jpg",
         imgAlt: "Forward Thinking For Your Business book image",
         price: 249.0,
@@ -540,7 +588,7 @@ export default function HomePage() {
         title: "Forward Thinking For Your Business",
       },
       {
-        id: 2,
+        id: 102,
         img: "71QC2VQfKdL._AC_SY200_.jpg",
         imgAlt:
           "Hold The Line My Story from the heart of the Free... book image",
@@ -551,7 +599,7 @@ export default function HomePage() {
         title: "Hold The Line My Story from the heart of the Free",
       },
       {
-        id: 3,
+        id: 103,
         img: "61YeOt+1c9L._AC_SY200_.jpg",
         imgAlt: "Courageous Endeavour book image",
         price: 249.0,
@@ -561,7 +609,7 @@ export default function HomePage() {
         title: "Courageous Endeavour",
       },
       {
-        id: 4,
+        id: 104,
         img: "51bllQ0rwwL._AC_SY200_.jpg",
         imgAlt: "Tommy Transit's Bus Tales book image",
         price: 249.0,
@@ -571,7 +619,7 @@ export default function HomePage() {
         title: "Tommy Transit's Bus Tales",
       },
       {
-        id: 5,
+        id: 105,
         img: "61CpCRQXV-L._AC_SY200_.jpg",
         imgAlt: "The Glory of Yusuf book image",
         price: 249.0,
@@ -581,7 +629,7 @@ export default function HomePage() {
         title: "The Glory of Yusuf",
       },
       {
-        id: 6,
+        id: 106,
         img: "61tD0RD6sGL._AC_SY200_.jpg",
         imgAlt: "Canada Brave New World book image",
         price: 249.0,
@@ -591,7 +639,7 @@ export default function HomePage() {
         title: "Canada Brave New World",
       },
       {
-        id: 7,
+        id: 107,
         img: "61toBWkmWrL._AC_SY200_.jpg",
         imgAlt: "Well Done book image",
         price: 249.0,
@@ -601,7 +649,7 @@ export default function HomePage() {
         title: "Well Done",
       },
       {
-        id: 8,
+        id: 108,
         img: "61emxJ-ce4L._AC_SY200_.jpg",
         imgAlt: "Akwesasne Mohawk Social Song and Dances book image",
         price: 249.0,
@@ -611,7 +659,7 @@ export default function HomePage() {
         title: "Akwesasne Mohawk Social Song and Dances",
       },
       {
-        id: 9,
+        id: 109,
         img: "91vwHMt+x7L._AC_SY200_.jpg",
         imgAlt: "The Legend of Zelda book image",
         price: 249.0,
@@ -621,7 +669,7 @@ export default function HomePage() {
         title: "The Legend of Zelda",
       },
       {
-        id: 10,
+        id: 110,
         img: "71LPmvTHbwL._AC_SY200_.jpg",
         imgAlt: "MCAT book image",
         price: 249.0,
@@ -631,7 +679,7 @@ export default function HomePage() {
         title: "MCAT",
       },
       {
-        id: 11,
+        id: 111,
         img: "71Oe52rlngL._AC_SY200_.jpg",
         imgAlt: "The Most Amazing Marketing Book Ever book image",
         price: 249.0,
@@ -641,7 +689,7 @@ export default function HomePage() {
         title: "The Most Amazing Marketing Book Ever",
       },
       {
-        id: 12,
+        id: 112,
         img: "71SN45kkvDL._AC_SY200_.jpg",
         imgAlt: "The Glucose Goddess Method book image",
         price: 249.0,
@@ -651,7 +699,7 @@ export default function HomePage() {
         title: "The Glucose Goddess Method",
       },
       {
-        id: 13,
+        id: 113,
         img: "610Ux13yhpS._AC_SY200_.jpg",
         imgAlt: "Anxiety Rx book image",
         price: 249.0,
@@ -661,7 +709,7 @@ export default function HomePage() {
         title: "Anxiety Rx",
       },
       {
-        id: 14,
+        id: 114,
         img: "61yIn0OqgpL._AC_SY200_.jpg",
         imgAlt: "Core Joy book image",
         price: 249.0,
@@ -671,7 +719,7 @@ export default function HomePage() {
         title: "Core Joy",
       },
       {
-        id: 15,
+        id: 115,
         img: "61Xlx5y9emL._AC_SY200_.jpg",
         imgAlt: "Math 3C Renert Aaron book image",
         price: 249.0,
@@ -681,7 +729,7 @@ export default function HomePage() {
         title: "Math 3C Renert Aaron",
       },
       {
-        id: 16,
+        id: 116,
         img: "51HuAlryNFL._AC_SY200_.jpg",
         imgAlt: "On Love and Death and Belonging book image",
         price: 249.0,
@@ -691,7 +739,7 @@ export default function HomePage() {
         title: "On Love and Death and Belonging",
       },
       {
-        id: 17,
+        id: 117,
         img: "61hyIdXWGeL._AC_SY200_.jpg",
         imgAlt: "Math 3D Renert Aaron book image",
         price: 249.0,
@@ -701,7 +749,7 @@ export default function HomePage() {
         title: "Math 3D Renert Aaron",
       },
       {
-        id: 18,
+        id: 118,
         img: "71c40f3fLCL._AC_SY200_.jpg",
         imgAlt: "Why Doctors Don't Get Rich book image",
         price: 249.0,
@@ -711,7 +759,7 @@ export default function HomePage() {
         title: "Why Doctors Don't Get Rich",
       },
       {
-        id: 19,
+        id: 119,
         img: "61Sb+8UJUbL._AC_SY200_.jpg",
         imgAlt: "The Family of Insects book image",
         price: 249.0,
@@ -721,7 +769,7 @@ export default function HomePage() {
         title: "The Family of Insects",
       },
       {
-        id: 20,
+        id: 120,
         img: "614H+Ia0evL._AC_SY200_.jpg",
         imgAlt: "The Players of a Builder book image",
         price: 249.0,
@@ -731,7 +779,7 @@ export default function HomePage() {
         title: "The Players of a Builder",
       },
       {
-        id: 21,
+        id: 121,
         img: "81IsKlDYgdL._AC_SY200_.jpg",
         imgAlt: "Let Your Light Shine book image",
         price: 249.0,
@@ -741,7 +789,7 @@ export default function HomePage() {
         title: "Let Your Light Shine",
       },
       {
-        id: 22,
+        id: 122,
         img: "61ad-ippQVL._AC_SY200_.jpg",
         imgAlt: "Math 4B Renert Aaron book image",
         price: 249.0,
@@ -751,7 +799,7 @@ export default function HomePage() {
         title: "Math 4B Renert Aaron",
       },
       {
-        id: 23,
+        id: 123,
         img: "61FFdoQi8BL._AC_SY200_.jpg",
         imgAlt: "Math 1B Renert Aaron book image",
         price: 249.0,
@@ -761,7 +809,7 @@ export default function HomePage() {
         title: "Math 1B Renert Aaron",
       },
       {
-        id: 24,
+        id: 124,
         img: "61nOsjRJVzL._AC_SY200_.jpg",
         imgAlt: "My Transformation Journal book image",
         price: 249.0,
@@ -771,7 +819,7 @@ export default function HomePage() {
         title: "My Transformation Journal",
       },
       {
-        id: 25,
+        id: 125,
         img: "611ZidyrEzL._AC_SY200_.jpg",
         imgAlt: "Buddy the Dinosaur book image",
         price: 249.0,
@@ -781,7 +829,7 @@ export default function HomePage() {
         title: "Buddy the Dinosaur",
       },
       {
-        id: 26,
+        id: 126,
         img: "61YEjnkPxtL._AC_SY200_.jpg",
         imgAlt: "I AM WORTHY book image",
         price: 249.0,
@@ -791,7 +839,7 @@ export default function HomePage() {
         title: "I AM WORTHY",
       },
       {
-        id: 27,
+        id: 127,
         img: "41i5REBmrSL._AC_SY200_.jpg",
         imgAlt: "Never Going Back book image",
         price: 249.0,
@@ -801,8 +849,8 @@ export default function HomePage() {
         title: "Never Going Back",
       },
       {
-        id: 28,
         img: "61wBkGUoifL._AC_SY200_.jpg",
+        id: 128,
         imgAlt: "A Giant in the North Maine Woods book image",
         price: 249.0,
         isDiscount: false,
@@ -811,7 +859,7 @@ export default function HomePage() {
         title: "A Giant in the North Maine Woods",
       },
       {
-        id: 29,
+        id: 129,
         img: "514ybv+7taL._AC_SY200_.jpg",
         imgAlt: "Reiki The Healing Touch book image",
         price: 249.0,
@@ -821,7 +869,7 @@ export default function HomePage() {
         title: "Reiki The Healing Touch",
       },
       {
-        id: 30,
+        id: 130,
         img: "61NtwwCZVfL._AC_SY200_.jpg",
         imgAlt: "Self Love Elevated book image",
         price: 249.0,
@@ -1412,6 +1460,544 @@ export default function HomePage() {
     ],
   };
 
+  const productCarouselData5 = {
+    type: "product",
+    isRegular: true,
+    isHeaderTitle: true,
+    headerTitle: "Deals on electronics, gadgets & accessories",
+    isLink: true,
+    linkInfo: {
+      title: "Explore all deals",
+      url: "#",
+    },
+    products: [
+      {
+        id: 71,
+        img: "41RPcAW0b8L._AC_SY200_.jpg",
+        imgAlt:
+          "ASUS BE24EQK 23.8” Business Monitor with 1080P Full HD IPS image",
+        isPrice: true,
+        isDiscount: true,
+        isTitle: true,
+        price: 169.0,
+        discount: { count: 18, isTopDeal: false },
+        title: "ASUS BE24EQK 23.8” Business Monitor with 1080P Full HD IPS",
+      },
+      {
+        id: 72,
+        img: "41WkAu6UJLL._AC_SY200_.jpg",
+        imgAlt: "MSI Gaming GeForce RTX 3050 8GB GDDR6 128-Bit image",
+        isPrice: true,
+        isDiscount: true,
+        isTitle: true,
+        price: 294.32,
+        discount: { count: 25, isTopDeal: false },
+        title: "MSI Gaming GeForce RTX 3050 8GB GDDR6 128-Bit",
+      },
+      {
+        id: 73,
+        img: "3145szSi9kL._AC_SY200_.jpg",
+        imgAlt:
+          "Speck Products Balance Folio iPad (2019/2020) Case and Stand image",
+        isPrice: true,
+        isDiscount: true,
+        isTitle: true,
+        price: 19.27,
+        discount: { count: 22, isTopDeal: false },
+        title: "Speck Products Balance Folio iPad (2019/2020) Case and Stand",
+      },
+      {
+        id: 74,
+        img: "41lfRtmuqyL._AC_SY200_.jpg",
+        imgAlt:
+          "uxcell a13051400ux0579 Plastic Shell Audio Speaker Cable Banana Connector Black Red image",
+        isPrice: true,
+        isDiscount: true,
+        isTitle: true,
+        price: 5.99,
+        discount: { count: 8, isTopDeal: false },
+        title:
+          "uxcell a13051400ux0579 Plastic Shell Audio Speaker Cable Banana Connector Black Red",
+      },
+      {
+        id: 75,
+        img: "51xRK+iwxDL._AC_SY200_.jpg",
+        imgAlt: "Cooler Master MasterAir MA610P RGB CPU Air Cooler image",
+        isPrice: true,
+        isDiscount: true,
+        isTitle: true,
+        price: 60.0,
+        discount: { count: 18, isTopDeal: false },
+        title: "Cooler Master MasterAir MA610P RGB CPU Air Cooler",
+      },
+      {
+        id: 76,
+        img: "41W6iPnMh2L._AC_SY200_.jpg",
+        imgAlt: "Sangean DDR-63 All-in-One Table Top with WiFi Internet image",
+        isPrice: true,
+        isDiscount: true,
+        isTitle: true,
+        price: 339.95,
+        discount: { count: 17, isTopDeal: false },
+        title: "Sangean DDR-63 All-in-One Table Top with WiFi Internet",
+      },
+      {
+        id: 77,
+        img: "21dmZWbranL._AC_SY200_.jpg",
+        imgAlt: "GM Genuine Parts 15201407 Rear Radio Speaker image",
+        isPrice: true,
+        isDiscount: true,
+        isTitle: true,
+        price: 40.49,
+        discount: { count: 48, isTopDeal: false },
+        title: "GM Genuine Parts 15201407 Rear Radio Speaker",
+      },
+      {
+        id: 78,
+        img: "41a9Bb1aKIL._AC_SY200_.jpg",
+        imgAlt: "JVC HA-V570 Supra-Aural Headphones image",
+        isPrice: true,
+        isDiscount: true,
+        isTitle: true,
+        price: 19.95,
+        discount: { count: 25, isTopDeal: false },
+        title: "JVC HA-V570 Supra-Aural Headphones",
+      },
+      {
+        id: 79,
+        img: "41oF7UtRG5L._AC_SY200_.jpg",
+        imgAlt: "Freightliner 5.25 Inch Coaxial Speaker - 22-43130-001 image",
+        isPrice: true,
+        isDiscount: true,
+        isTitle: true,
+        price: 57.12,
+        discount: { count: 26, isTopDeal: false },
+        title: "Freightliner 5.25 Inch Coaxial Speaker - 22-43130-001",
+      },
+      {
+        id: 80,
+        img: "51tw4etoXSL._AC_SY200_.jpg",
+        imgAlt: "Earthquake Sound MiNi D1000.4 (Gen 2) Stereo Class image",
+        isPrice: true,
+        isDiscount: true,
+        isTitle: true,
+        price: 180.32,
+        discount: { count: 11, isTopDeal: false },
+        title: "Earthquake Sound MiNi D1000.4 (Gen 2) Stereo Class",
+      },
+      {
+        id: 81,
+        img: "41e0O4mW9GL._AC_SY200_.jpg",
+        imgAlt:
+          "Humminbird CC ICE Soft Sided Carrying Case for Flashers with No Shuttle image",
+        isPrice: true,
+        isDiscount: true,
+        isTitle: true,
+        price: 54.99,
+        discount: { count: 15, isTopDeal: false },
+        title:
+          "Humminbird CC ICE Soft Sided Carrying Case for Flashers with No Shuttle",
+      },
+      {
+        id: 82,
+        img: "41IQSIWhqNL._AC_SY200_.jpg",
+        imgAlt:
+          "Prime Wire & Cable PB8100X2 6-Outlet Power Strip with Right Angle Plug image",
+        isPrice: true,
+        isDiscount: true,
+        isTitle: true,
+        price: 21.49,
+        discount: { count: 45, isTopDeal: false },
+        title:
+          "Prime Wire & Cable PB8100X2 6-Outlet Power Strip with Right Angle Plug",
+      },
+      {
+        id: 83,
+        img: "31gOVkZ7RmL._AC_SY200_.jpg",
+        imgAlt: "SureCall 2' SC-400 Ultra Low-Loss Coax Cable image",
+        isPrice: true,
+        isDiscount: true,
+        isTitle: true,
+        price: 19.2,
+        discount: { count: 17, isTopDeal: false },
+        title: "SureCall 2' SC-400 Ultra Low-Loss Coax Cable",
+      },
+      {
+        id: 84,
+        img: "51RsbERSq3L._AC_SY200_.jpg",
+        imgAlt:
+          "Design Engineering 050199 Boom Mat Speaker Performance Kit image",
+        isPrice: true,
+        isDiscount: true,
+        isTitle: true,
+        price: 22.7,
+        discount: { count: 17, isTopDeal: false },
+        title: "Design Engineering 050199 Boom Mat Speaker Performance Kit",
+      },
+    ],
+  };
+
+  const productCarouselData6 = {
+    type: "product",
+    isRegular: false,
+    isHeaderTitle: true,
+    headerTitle: "New international customers purchased",
+    isLink: false,
+    products: [
+      {
+        id: 85,
+        img: "81qo19353yL._AC_SY200_.jpg",
+        imgAlt: "Clear Care Plus Cleaning Solution with Lens Case image",
+        price: 249.0,
+        isDiscount: false,
+        discount: { count: 40, isTopDeal: false },
+        isTitle: false,
+        title: "Clear Care Plus Cleaning Solution with Lens Case",
+      },
+      {
+        id: 86,
+        img: "71-GCIBN8wL._AC_SY200_.jpg",
+        imgAlt:
+          "PanOxyl Acne Foaming Wash Benzoyl Peroxide 10% Maximum Strength Antimicrobial image",
+        price: 249.0,
+        isDiscount: false,
+        discount: { count: 40, isTopDeal: false },
+        isTitle: false,
+        title:
+          "PanOxyl Acne Foaming Wash Benzoyl Peroxide 10% Maximum Strength Antimicrobial",
+      },
+      {
+        id: 87,
+        img: "51uebuBULdL._AC_SY200_.jpg",
+        imgAlt: "Umary Hyaluronic Acid 30 Caplets 850 mg image",
+        price: 249.0,
+        isDiscount: false,
+        discount: { count: 40, isTopDeal: false },
+        isTitle: false,
+        title: "Umary Hyaluronic Acid 30 Caplets 850 mg",
+      },
+      {
+        id: 88,
+        img: "71XXh2t8guL._AC_SY200_.jpg",
+        imgAlt: "My Suitcase: Nii Sookayis Paperback image",
+        price: 249.0,
+        isDiscount: false,
+        discount: { count: 40, isTopDeal: false },
+        isTitle: false,
+        title: "My Suitcase: Nii Sookayis Paperback",
+      },
+      {
+        id: 89,
+        img: "61YcMiBeYsL._AC_SY200_.jpg",
+        imgAlt: "Trade Up book image",
+        price: 249.0,
+        isDiscount: false,
+        discount: { count: 40, isTopDeal: false },
+        isTitle: false,
+        title: "Trade Up",
+      },
+      {
+        id: 90,
+        img: "41i5REBmrSL._AC_SY200_.jpg",
+        imgAlt: "Never Going Back: The Gordon Ferguson Story image",
+        price: 249.0,
+        isDiscount: false,
+        discount: { count: 40, isTopDeal: false },
+        isTitle: false,
+        title: "Never Going Back: The Gordon Ferguson Story",
+      },
+      {
+        id: 91,
+        img: "71oVA1y3BHL._AC_SY200_.jpg",
+        imgAlt:
+          "Gold Bond Age Renew Retinol Overnight Body & Face Lotion image",
+        price: 249.0,
+        isDiscount: false,
+        discount: { count: 40, isTopDeal: false },
+        isTitle: false,
+        title: "Gold Bond Age Renew Retinol Overnight Body & Face Lotion",
+      },
+      {
+        id: 92,
+        img: "51Ski-M7vgL._AC_SY200_.jpg",
+        imgAlt:
+          "More than Gold: Reflections on Living in Glorious Freedom image",
+        price: 249.0,
+        isDiscount: false,
+        discount: { count: 40, isTopDeal: false },
+        isTitle: false,
+        title: "More than Gold: Reflections on Living in Glorious Freedom",
+      },
+      {
+        id: 93,
+        img: "61TGJKUMfCL._AC_SY200_.jpg",
+        imgAlt: "SOLARAY Tongkat Ali 400 mg image",
+        price: 249.0,
+        isDiscount: false,
+        discount: { count: 40, isTopDeal: false },
+        isTitle: false,
+        title: "SOLARAY Tongkat Ali 400 mg",
+      },
+      {
+        id: 94,
+        img: "71EvfFtt-XL._AC_SY200_.jpg",
+        imgAlt:
+          "Bloom Nutrition Super Greens Powder Smoothie & Juice Mix image",
+        price: 249.0,
+        isDiscount: false,
+        discount: { count: 40, isTopDeal: false },
+        isTitle: false,
+        title: "Bloom Nutrition Super Greens Powder Smoothie & Juice Mix",
+      },
+      {
+        id: 95,
+        img: "51LevSjhgsL._AC_SY200_.jpg",
+        imgAlt:
+          "In Christ: 25 Meditations for Your Personal Transformation image",
+        price: 249.0,
+        isDiscount: false,
+        discount: { count: 40, isTopDeal: false },
+        isTitle: false,
+        title: "In Christ: 25 Meditations for Your Personal Transformation",
+      },
+      {
+        id: 96,
+        img: "51VlG-Mz7cL._AC_SY200_.jpg",
+        imgAlt: "Hismile v34 Colour Corrector image",
+        price: 249.0,
+        isDiscount: false,
+        discount: { count: 40, isTopDeal: false },
+        isTitle: false,
+        title: "Hismile v34 Colour Corrector",
+      },
+    ],
+  };
+
+  const productCarouselData7 = {
+    type: "product",
+    isRegular: false,
+    isHeaderTitle: true,
+    headerTitle: "International top seller in Kitchen",
+    isLink: false,
+    products: [
+      {
+        id: 97,
+        img: "71JTkkNTBsL._AC_SY200_.jpg",
+        imgAlt: "Syngenta - Advion Evolution Cockroach Gel 4 Tips image",
+        price: 249.0,
+        isDiscount: false,
+        discount: { count: 40, isTopDeal: false },
+        isTitle: false,
+        title: "Syngenta - Advion Evolution Cockroach Gel 4 Tips",
+      },
+      {
+        id: 98,
+        img: "61bkLmKirCL._AC_SY200_.jpg",
+        imgAlt: "Dr.Pen Adjustable Microneedling Derma Stamp image",
+        price: 249.0,
+        isDiscount: false,
+        discount: { count: 40, isTopDeal: false },
+        isTitle: false,
+        title: "Dr.Pen Adjustable Microneedling Derma Stamp",
+      },
+      {
+        id: 99,
+        img: "61fakPR+MOL._AC_SY200_.jpg",
+        imgAlt:
+          "Technology vs. Humanity: The coming clash between man and machine image",
+        price: 249.0,
+        isDiscount: false,
+        discount: { count: 40, isTopDeal: false },
+        isTitle: false,
+        title:
+          "Technology vs. Humanity: The coming clash between man and machine",
+      },
+      {
+        id: 100,
+        img: "71m743LFESL._AC_SY200_.jpg",
+        imgAlt: "RMFLEX Kukaflex Forte 30 tabletas image",
+        price: 249.0,
+        isDiscount: false,
+        discount: { count: 40, isTopDeal: false },
+        isTitle: false,
+        title: "RMFLEX Kukaflex Forte 30 tabletas",
+      },
+      {
+        id: 101,
+        img: "61pOYbCSq4L._AC_SY200_.jpg",
+        imgAlt:
+          "Forward Thinking For Your Business: It's not who you know in business book image",
+        price: 249.0,
+        isDiscount: false,
+        discount: { count: 40, isTopDeal: false },
+        isTitle: false,
+        title:
+          "Forward Thinking For Your Business: It's not who you know in business",
+      },
+      {
+        id: 109,
+        img: "91vwHMt+x7L._AC_SY200_.jpg",
+        imgAlt: "The Legend of Zelda™: Tears of the Kingdom book image",
+        price: 249.0,
+        isDiscount: false,
+        discount: { count: 40, isTopDeal: false },
+        isTitle: false,
+        title: "The Legend of Zelda™: Tears of the Kingdom",
+      },
+      {
+        id: 110,
+        img: "71LPmvTHbwL._AC_SY200_.jpg",
+        imgAlt: "MCAT Complete 7-Book Subject Review 2023-2024 books image",
+        price: 249.0,
+        isDiscount: false,
+        discount: { count: 40, isTopDeal: false },
+        isTitle: false,
+        title: "MCAT Complete 7-Book Subject Review 2023-2024",
+      },
+      {
+        id: 111,
+        img: "71Oe52rlngL._AC_SY200_.jpg",
+        imgAlt: "More than 350 inspiring ideas! book image",
+        price: 249.0,
+        isDiscount: false,
+        discount: { count: 40, isTopDeal: false },
+        isTitle: false,
+        title:
+          "The Most Amazing Marketing Book Ever: More than 350 inspiring ideas!",
+      },
+      {
+        id: 134,
+        img: "81S7jJk9hxL._AC_SY200_.jpg",
+        imgAlt: "Franklin Sports Soccer Shin Guards for Youth + Adults image",
+        price: 249.0,
+        isDiscount: false,
+        discount: { count: 40, isTopDeal: false },
+        isTitle: false,
+        title: "Franklin Sports Soccer Shin Guards for Youth + Adults",
+      },
+      {
+        id: 139,
+        img: "51LrsAC9AOL._AC_SY200_.jpg",
+        imgAlt: "JISULIFE Handheld Mini Fan, 3 IN 1 Hand Fan image",
+        price: 249.0,
+        isDiscount: false,
+        discount: { count: 40, isTopDeal: false },
+        isTitle: false,
+        title: "JISULIFE Handheld Mini Fan, 3 IN 1 Hand Fan",
+      },
+      {
+        id: 140,
+        img: "511zdBa2lLL._AC_SY200_.jpg",
+        imgAlt: "Lann's Linens - 90 x 156 Premium Tablecloth image",
+        price: 249.0,
+        isDiscount: false,
+        discount: { count: 40, isTopDeal: false },
+        isTitle: false,
+        title: "Lann's Linens - 90 x 156 Premium Tablecloth",
+      },
+      {
+        id: 141,
+        img: "91C5l82rgdL._AC_SY200_.jpg",
+        imgAlt: "600 Piece Silver Dinnerware Set image",
+        price: 249.0,
+        isDiscount: false,
+        discount: { count: 40, isTopDeal: false },
+        isTitle: false,
+        title: "600 Piece Silver Dinnerware Set",
+      },
+      {
+        id: 142,
+        img: "7140TguNvFL._AC_SY200_.jpg",
+        imgAlt: "Greater Goods Nutrition Food Scale image",
+        price: 249.0,
+        isDiscount: false,
+        discount: { count: 40, isTopDeal: false },
+        isTitle: false,
+        title: "Greater Goods Nutrition Food Scale",
+      },
+      {
+        id: 143,
+        img: "61SWaYy7AvL._AC_SY200_.jpg",
+        imgAlt: "OXO SteeL Double Jigger image",
+        price: 249.0,
+        isDiscount: false,
+        discount: { count: 40, isTopDeal: false },
+        isTitle: false,
+        title: "OXO SteeL Double Jigger",
+      },
+      {
+        id: 144,
+        img: "81h7SBztTUL._AC_SY200_.jpg",
+        imgAlt: "Fullstar Vegetable Chopper - Spiralizer Vegetable Slicer image",
+        price: 249.0,
+        isDiscount: false,
+        discount: { count: 40, isTopDeal: false },
+        isTitle: false,
+        title: "Fullstar Vegetable Chopper - Spiralizer Vegetable Slicer",
+      },
+      {
+        id: 145,
+        img: "71sfGeMtEgL._AC_SY200_.jpg",
+        imgAlt: "Ninja NC299AMZ CREAMi Ice Cream Maker image",
+        price: 249.0,
+        isDiscount: false,
+        discount: { count: 40, isTopDeal: false },
+        isTitle: false,
+        title: "Ninja NC299AMZ CREAMi Ice Cream Maker",
+      },
+      {
+        id: 146,
+        img: "81sbYnOkg2L._AC_SY200_.jpg",
+        imgAlt: "Alpha Grillers Instant Read Meat Thermometer for Grill and Cooking image",
+        price: 249.0,
+        isDiscount: false,
+        discount: { count: 40, isTopDeal: false },
+        isTitle: false,
+        title: "Alpha Grillers Instant Read Meat Thermometer for Grill and Cooking",
+      },
+      {
+        id: 147,
+        img: "81S-k9wCDyL._AC_SY200_.jpg",
+        imgAlt: "Mr Miracle 7 Inch Paper Hot Dog Tray in Kraft Paper image",
+        price: 249.0,
+        isDiscount: false,
+        discount: { count: 40, isTopDeal: false },
+        isTitle: false,
+        title: "Mr Miracle 7 Inch Paper Hot Dog Tray in Kraft Paper",
+      },
+      {
+        id: 148,
+        img: "7105g3SZ4GL._AC_SY200_.jpg",
+        imgAlt: "Yogurt Maker Automatic Digital Yoghurt Maker Machine with 8 Glass Jars 48 Ozs image",
+        price: 249.0,
+        isDiscount: false,
+        discount: { count: 40, isTopDeal: false },
+        isTitle: false,
+        title: "Yogurt Maker Automatic Digital Yoghurt Maker Machine with 8 Glass Jars 48 Ozs",
+      },
+      {
+        id: 149,
+        img: "51Cjfj+zclL._AC_SY200_.jpg",
+        imgAlt: "Stainless Steel Inner Pot Replacement Insert Liner Accessory image",
+        price: 249.0,
+        isDiscount: false,
+        discount: { count: 40, isTopDeal: false },
+        isTitle: false,
+        title: "Stainless Steel Inner Pot Replacement Insert Liner Accessory",
+      },
+      {
+        id: 150,
+        img: "71wGpsLN4ZL._AC_SY200_.jpg",
+        imgAlt: "CAROTE Pots and Pans Set Nonstick image",
+        price: 249.0,
+        isDiscount: false,
+        discount: { count: 40, isTopDeal: false },
+        isTitle: false,
+        title: "CAROTE Pots and Pans Set Nonstick",
+      },
+    ],
+  };
+
   return (
     <>
       <Header />
@@ -1428,6 +2014,11 @@ export default function HomePage() {
             <ProductCarousel data={productCarouselData3} />
             <ProductCarousel data={productCarouselData4} isRegular={true} />
             <CategoryCard data={categoryData4} />
+            <ProductCarousel data={productCarouselData5} isRegular={true} />
+            <ProductCarousel data={productCarouselData6} isRegular={true} />
+            <CategoryCard data={categoryData5} />
+            <ProductCarousel data={productCarouselData7} />
+            <PageProductSlider />
           </Gapper>
         </Container>
       </Main>

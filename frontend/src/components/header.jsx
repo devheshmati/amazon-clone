@@ -3,6 +3,7 @@ import MiniIcon from "../components/miniIcon";
 import { Icon } from "@iconify/react";
 import "../styles/header.scss";
 import "../styles/general.scss";
+import {Outlet, Link} from 'react-router-dom';
 
 export default function Header() {
   return (
@@ -12,13 +13,15 @@ export default function Header() {
           <div className="content">
             <div className="col-1">
               <span>
-                <MiniIcon
-                  img={symbolset1}
-                  w={"100px"}
-                  h={"40px"}
-                  x={"-8px"}
-                  y={"-43px"}
-                />
+                <Link to="/">
+                  <MiniIcon
+                    img={symbolset1}
+                    w={"100px"}
+                    h={"40px"}
+                    x={"-8px"}
+                    y={"-43px"}
+                  />
+                </Link>
               </span>
               <span className="span-2">
                 <span className="location-logo">
