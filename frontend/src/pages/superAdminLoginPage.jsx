@@ -1,6 +1,8 @@
 import "../styles/superAdminLoginPage.scss";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { SALogin, SALogout } from "../redux/actions/index";
 
 export default function SuperAdminLoginPage() {
   const [admin, setAdmin] = useState({
@@ -8,12 +10,22 @@ export default function SuperAdminLoginPage() {
     pwd: "",
   });
 
-  const [isAdmin, setIsAdmin] = useState(false);
+  const [err, setErr] = useState("");
+
+  const superAdmin = useSelector((state) => state.superAdminReducer);
+  const dispatch = useDispatch();
   let navigate = useNavigate();
 
   useEffect(() => {
-    isAdmin && navigate("/super_admin/dashboard");
-  }, [isAdmin]);
+    const getLocal = JSON.parse(localStorage.getItem("superAdmin"));
+    if (getLocal.status) {
+      navigate("/super_admin/dashboard");
+    }
+  }, []);
+
+  useEffect(() => {
+    superAdmin.superAdminStatus && navigate("/super_admin/dashboard");
+  }, [superAdmin.superAdminStatus]);
 
   const handleChange = (e) => {
     const name = e.target.name;
@@ -38,7 +50,13 @@ export default function SuperAdminLoginPage() {
     fetch(uri, option)
       .then((response) => response.json())
       .then((data) => {
-        setIsAdmin(data.status);
+        if (data.status) {
+          dispatch(SALogin(data));
+          localStorage.setItem("superAdmin", JSON.stringify(data));
+          setErr((state) => (state = ""));
+        } else {
+          setErr((state) => (state = "Access denied!"));
+        }
       })
       .catch((err) => console.log(err));
 
@@ -70,8 +88,9 @@ export default function SuperAdminLoginPage() {
           />
         </label>
         <button type="submit">Submit</button>
+        {superAdmin.superAdminStatus && <div>You are admin!</div>}
+        {err && <div>{err}</div>}
       </form>
-      <div>{isAdmin && <p>Your are admin!</p>}</div>
     </div>
   );
 }
