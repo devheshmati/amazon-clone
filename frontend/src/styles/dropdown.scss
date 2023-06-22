@@ -1,0 +1,33 @@
+@import "./colors";
+
+.dropdown {
+  position: relative;
+
+  .title {
+    display: inline-block;
+    padding: 1rem;
+  }
+
+  ul {
+    list-style: none;
+    top: 2rem;
+    left: 0;
+    width: 100%;
+
+    li {
+      padding-left: 1rem;
+
+      a {
+        font-size: 14px;
+      }
+
+      &:hover {
+        background-color: $orangeL;
+
+        a {
+          color: $dark;
+        }
+      }
+    }
+  }
+}

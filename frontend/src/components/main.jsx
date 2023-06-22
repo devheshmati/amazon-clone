@@ -1,6 +1,6 @@
-export default function Main({children}) {
+export default function Main({children, style}) {
   return (
-    <main>
+    <main style={style}>
       {children}
     </main>
   )

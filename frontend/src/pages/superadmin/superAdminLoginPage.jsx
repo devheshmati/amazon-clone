@@ -1,8 +1,8 @@
-import "../styles/superAdminLoginPage.scss";
+import "../../styles/superAdminLoginPage.scss";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { SALogin, SALogout } from "../redux/actions/index";
+import { SALogin, SALogout } from "../../redux/actions/index";
 
 export default function SuperAdminLoginPage() {
   const [admin, setAdmin] = useState({
@@ -19,12 +19,12 @@ export default function SuperAdminLoginPage() {
   useEffect(() => {
     const getLocal = JSON.parse(localStorage.getItem("superAdmin"));
     if (getLocal.status) {
-      navigate("/super_admin/dashboard");
+      navigate("main");
     }
   }, []);
 
   useEffect(() => {
-    superAdmin.superAdminStatus && navigate("/super_admin/dashboard");
+    superAdmin.superAdminStatus && navigate("main");
   }, [superAdmin.superAdminStatus]);
 
   const handleChange = (e) => {

@@ -1,0 +1,39 @@
+@import "./colors";
+
+.sidebar {
+  background-color: $dark;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 240px;
+  height: 100%;
+
+  > ul {
+    color: $white;
+    padding-top: 3.5rem;
+
+    > li {
+      a {
+        text-decoration: none;
+        width: 100%;
+        display: inline-block;
+        padding: 1rem;
+        color: $white;
+        font-size: 16px;
+      }
+
+      button {
+        color: $redLight;
+        background: none;
+        border: none;
+        padding: 1rem;
+        font-weight: bold;
+        font-size: 16px;
+      }
+
+      &:hover {
+        background-color: $darkHover;
+      }
+    }
+  }
+}
