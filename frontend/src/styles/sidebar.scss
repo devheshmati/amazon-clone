@@ -13,7 +13,7 @@
     padding-top: 3.5rem;
 
     > li {
-      a {
+      > a {
         text-decoration: none;
         width: 100%;
         display: inline-block;
@@ -22,7 +22,7 @@
         font-size: 16px;
       }
 
-      button {
+      > button {
         color: $redLight;
         background: none;
         border: none;
@@ -31,9 +31,10 @@
         font-size: 16px;
       }
 
-      &:hover {
+      &:not(li.no-hover-needed):hover {
         background-color: $darkHover;
       }
     }
+    
   }
 }

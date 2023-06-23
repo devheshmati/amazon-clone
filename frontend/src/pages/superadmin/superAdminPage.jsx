@@ -24,7 +24,7 @@ export default function SuperAdminPage() {
         { title: "Products Manager", to: "products_manager" },
       ],
     },
-    { type: "signout" },
+    { type: "signout", title: "Signout" },
   ];
 
   return (

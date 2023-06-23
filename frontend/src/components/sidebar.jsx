@@ -20,13 +20,16 @@ export default function Sidebar({ data }) {
       <ul>
         {data.map((item, index) => {
           return (
-            <li key={index}>
+            <li
+              className={item.type === "dropdown" ? "no-hover-needed" : ""}
+              key={index}
+            >
               {!item.type ? (
                 <Link to={item.to}>{item.title}</Link>
               ) : item.type === "signout" ? (
                 <button onClick={handleClick}>{item.title}</button>
               ) : (
-                  <Dropdown data={item.items} title={item.title} />
+                <Dropdown data={item.items} title={item.title} />
               )}
             </li>
           );
