@@ -7,7 +7,8 @@ import Header from "../../components/header";
 import Footer from "../../components/footer";
 import SuperAdminDashboardPage from "./superAdminDashboardPage";
 import SuperAdminProductManagerPage from "./superAdminProductManagerPage";
-import SuperAdminCreateProductPage from './superAdminCreateProductPage';
+import SuperAdminCreateProductPage from "./superAdminCreateProductPage";
+import SuperAdminCategoriesPage from "./superAdminCategoriesPage";
 
 export default function SuperAdminPage() {
   const superAdmin = useSelector((state) => state.superAdminReducer);
@@ -24,6 +25,7 @@ export default function SuperAdminPage() {
         { title: "Products Manager", to: "products_manager" },
       ],
     },
+    { title: "Categories", to: "categories" },
     { type: "signout", title: "Signout" },
   ];
 
@@ -54,6 +56,7 @@ function SAContent() {
         path="products_manager"
         element={<SuperAdminProductManagerPage />}
       />
+      <Route path="categories" element={<SuperAdminCategoriesPage />} />
     </Routes>
   );
 }

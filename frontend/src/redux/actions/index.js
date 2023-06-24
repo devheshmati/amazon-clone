@@ -5,3 +5,14 @@ export const SALogin = (obj) => {
 export const SALogout = () => {
   return { type: "SA_LOGOUT" };
 };
+
+export const AddCategory = (obj) => {
+  return {
+    type: "ADD_CATEGORY",
+    payload: { value: obj },
+  };
+};
+
+export const DeleteCategory = (obj) => {
+  return { type: "ADD_CATEGORY", payload: { index: obj.index } };
+};

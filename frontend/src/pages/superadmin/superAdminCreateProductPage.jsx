@@ -1,7 +1,12 @@
-export default function SuperAdminCreateProductPage () {
+export default function SuperAdminCreateProductPage() {
   return (
-    <div>
-      This is create product page
-    </div>
-  )
+    <>
+      <form>
+        <input name="name" type="text" />
+        <select name>
+          <option value=""></option>
+        </select>
+      </form>
+    </>
+  );
 }
