@@ -13,6 +13,13 @@ export const AddCategory = (obj) => {
   };
 };
 
+export const SwapCategory = (obj) => {
+  return {
+    type: "SWAP_CATEGORY",
+    payload: { value: obj.items },
+  };
+};
+
 export const DeleteCategory = (obj) => {
-  return { type: "ADD_CATEGORY", payload: { index: obj.index } };
+  return { type: "DELETE_CATEGORY", payload: { index: obj.index } };
 };

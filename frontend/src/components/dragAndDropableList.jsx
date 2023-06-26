@@ -1,14 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export default function DragAndDropableList({ data }) {
   const [currItem, setCurrItem] = useState(0);
-  useEffect(() => {
-    console.log(data);
-  });
+  const [categories, handleSwap, handleUpdate, handleDelete] = data;
 
   const handleDrag = (index) => {
     setCurrItem(index);
-    console.log(index);
   };
 
   const handleDragOver = (e) => {
@@ -17,18 +14,22 @@ export default function DragAndDropableList({ data }) {
 
   const handleDrop = (index) => {
     // swap a with b in state
+    const temp = categories[currItem];
+    categories[currItem] = categories[index];
+    categories[index] = temp;
+    handleSwap(categories);
   };
 
   return (
     <div className="dragAndDropableList">
       <ul>
-        {data.map((item, index) => (
+        {categories.map((item, index) => (
           <li
             key={index}
-            draggable={true}
-            onDragStart={(e) => handleDrag(index)}
+            draggable
+            onDragStart={() => handleDrag(index)}
             onDragOver={(e) => handleDragOver(e)}
-            onDrop={(e) => handleDrop(index)}
+            onDrop={() => handleDrop(index)}
           >
             <span>{item.title}</span>
           </li>
