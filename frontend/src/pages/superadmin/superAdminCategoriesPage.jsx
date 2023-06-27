@@ -3,7 +3,7 @@ import "../../styles/superAdminCategory.scss";
 import Container from "../../components/container";
 import DragAndDropableList from "../../components/dragAndDropableList";
 import { useSelector, useDispatch } from "react-redux";
-import { AddCategory, SwapCategory } from "../../redux/actions/index";
+import { AddCategory, SwapCategory, DeleteCategory } from "../../redux/actions/index";
 
 export default function SuperAdminCategories() {
   const [inputVal, setInputVal] = useState({ title: "" });
@@ -22,9 +22,11 @@ export default function SuperAdminCategories() {
     dispatch(SwapCategory({ items: newArr }));
   };
 
-  const handleUpdate = () => {};
+  const handleUpdate = () => { };
 
-  const handleDelete = () => {};
+  const handleDelete = (index) => {
+    dispatch(DeleteCategory({value: index}))
+  };
 
   return (
     <Container style={{ margin: "2rem" }}>
@@ -41,11 +43,9 @@ export default function SuperAdminCategories() {
         </form>
       </div>
       {categories.items.length > 0 && (
-        <div className="list-frame">
-          <DragAndDropableList
-            data={[categories.items, handleSwap, handleUpdate, handleDelete]}
-          />
-        </div>
+        <DragAndDropableList
+          data={[categories.items, handleSwap, handleUpdate, handleDelete]}
+        />
       )}
     </Container>
   );

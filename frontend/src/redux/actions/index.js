@@ -21,5 +21,5 @@ export const SwapCategory = (obj) => {
 };
 
 export const DeleteCategory = (obj) => {
-  return { type: "DELETE_CATEGORY", payload: { index: obj.index } };
+  return { type: "DELETE_CATEGORY", payload: { value: obj.value } };
 };

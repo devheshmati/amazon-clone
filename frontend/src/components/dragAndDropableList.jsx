@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { Icon } from "@iconify/react";
+import '../styles/dragAndDropableList.scss';
 
 export default function DragAndDropableList({ data }) {
   const [currItem, setCurrItem] = useState(0);
@@ -32,6 +34,14 @@ export default function DragAndDropableList({ data }) {
             onDrop={() => handleDrop(index)}
           >
             <span>{item.title}</span>
+            <div className="btns-frame">
+              <button>
+                <Icon icon="material-symbols:edit-outline" />
+              </button>
+              <button onClick={() => handleDelete(index)}>
+                <Icon icon="iconoir:trash" />
+              </button>
+            </div>
           </li>
         ))}
       </ul>
