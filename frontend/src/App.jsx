@@ -4,7 +4,6 @@ import DealMotherPage from "./pages/dealMotherPage";
 import NoPage from "./pages/noPage";
 import "./styles/reset.scss";
 import "./styles/basic.scss";
-import Main from "./components/main";
 import SuperAdminLoginPage from "./pages/superadmin/superAdminLoginPage";
 import SuperAdminPage from "./pages/superadmin/superAdminPage";
 import { Provider } from "react-redux";
